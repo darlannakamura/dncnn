@@ -1,0 +1,2086 @@
+2020-01-17 17:04:02.296458: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-01-17 17:04:07.376527: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x16a51f0 executing computations on platform CUDA. Devices:
+2020-01-17 17:04:07.376569: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2020-01-17 17:04:07.379074: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2596985000 Hz
+2020-01-17 17:04:07.379482: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x1d69540 executing computations on platform Host. Devices:
+2020-01-17 17:04:07.379502: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2020-01-17 17:04:07.380037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 1b38:00:00.0
+totalMemory: 11.17GiB freeMemory: 11.11GiB
+2020-01-17 17:04:07.380056: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2020-01-17 17:04:07.382487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-01-17 17:04:07.382506: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2020-01-17 17:04:07.382516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2020-01-17 17:04:07.382585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10297 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 1b38:00:00.0, compute capability: 3.7)
+/home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:529: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:530: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:535: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /home/davi/Documentos/dncnn/model.py:11: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+WARNING:tensorflow:From /home/davi/.local/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/davi/Documentos/dncnn/model.py:15: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.batch_normalization instead.
+GPU
+
+[*] Initialize model successfully...
+['./data/train/noisy/slice_label_0.png', './data/train/noisy/slice_label_1.png', './data/train/noisy/slice_label_10.png', './data/train/noisy/slice_label_11.png', './data/train/noisy/slice_label_12.png', './data/train/noisy/slice_label_13.png', './data/train/noisy/slice_label_14.png', './data/train/noisy/slice_label_15.png', './data/train/noisy/slice_label_16.png', './data/train/noisy/slice_label_17.png', './data/train/noisy/slice_label_18.png', './data/train/noisy/slice_label_19.png', './data/train/noisy/slice_label_2.png', './data/train/noisy/slice_label_20.png', './data/train/noisy/slice_label_21.png', './data/train/noisy/slice_label_22.png', './data/train/noisy/slice_label_23.png', './data/train/noisy/slice_label_24.png', './data/train/noisy/slice_label_25.png', './data/train/noisy/slice_label_26.png', './data/train/noisy/slice_label_27.png', './data/train/noisy/slice_label_28.png', './data/train/noisy/slice_label_29.png', './data/train/noisy/slice_label_3.png', './data/train/noisy/slice_label_30.png', './data/train/noisy/slice_label_31.png', './data/train/noisy/slice_label_32.png', './data/train/noisy/slice_label_33.png', './data/train/noisy/slice_label_34.png', './data/train/noisy/slice_label_35.png', './data/train/noisy/slice_label_36.png', './data/train/noisy/slice_label_37.png', './data/train/noisy/slice_label_38.png', './data/train/noisy/slice_label_39.png', './data/train/noisy/slice_label_4.png', './data/train/noisy/slice_label_40.png', './data/train/noisy/slice_label_41.png', './data/train/noisy/slice_label_42.png', './data/train/noisy/slice_label_43.png', './data/train/noisy/slice_label_44.png', './data/train/noisy/slice_label_45.png', './data/train/noisy/slice_label_46.png', './data/train/noisy/slice_label_47.png', './data/train/noisy/slice_label_48.png', './data/train/noisy/slice_label_49.png', './data/train/noisy/slice_label_5.png', './data/train/noisy/slice_label_50.png', './data/train/noisy/slice_label_51.png', './data/train/noisy/slice_label_52.png', './data/train/noisy/slice_label_53.png', './data/train/noisy/slice_label_54.png', './data/train/noisy/slice_label_55.png', './data/train/noisy/slice_label_56.png', './data/train/noisy/slice_label_57.png', './data/train/noisy/slice_label_58.png', './data/train/noisy/slice_label_59.png', './data/train/noisy/slice_label_6.png', './data/train/noisy/slice_label_60.png', './data/train/noisy/slice_label_61.png', './data/train/noisy/slice_label_62.png', './data/train/noisy/slice_label_63.png', './data/train/noisy/slice_label_64.png', './data/train/noisy/slice_label_65.png', './data/train/noisy/slice_label_66.png', './data/train/noisy/slice_label_67.png', './data/train/noisy/slice_label_68.png', './data/train/noisy/slice_label_69.png', './data/train/noisy/slice_label_7.png', './data/train/noisy/slice_label_70.png', './data/train/noisy/slice_label_71.png', './data/train/noisy/slice_label_72.png', './data/train/noisy/slice_label_73.png', './data/train/noisy/slice_label_74.png', './data/train/noisy/slice_label_75.png', './data/train/noisy/slice_label_76.png', './data/train/noisy/slice_label_77.png', './data/train/noisy/slice_label_78.png', './data/train/noisy/slice_label_79.png', './data/train/noisy/slice_label_8.png', './data/train/noisy/slice_label_9.png']
+[*] Reading checkpoint...
+[*] Not find pretrained model!
+[*] Start training, with start epoch 0 start iter 0 : 
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 25.70
+(1, 180, 180, 1)
+img2 PSNR: 29.66
+(1, 180, 180, 1)
+img3 PSNR: 29.49
+(1, 180, 180, 1)
+img4 PSNR: 29.46
+(1, 180, 180, 1)
+img5 PSNR: 29.39
+(1, 180, 180, 1)
+img6 PSNR: 29.70
+(1, 180, 180, 1)
+img7 PSNR: 29.43
+(1, 180, 180, 1)
+img8 PSNR: 29.43
+(1, 180, 180, 1)
+img9 PSNR: 29.46
+(1, 180, 180, 1)
+img10 PSNR: 29.17
+--- Test ---- Average PSNR 29.09 ---
+Epoch: [ 1] [   1/ 160] time: 4.9435, loss: 1230.533447
+Epoch: [ 1] [   2/ 160] time: 6.2312, loss: 719.224976
+Epoch: [ 1] [   3/ 160] time: 7.5233, loss: 604.188110
+Epoch: [ 1] [   4/ 160] time: 8.8169, loss: 458.906250
+Epoch: [ 1] [   5/ 160] time: 10.1085, loss: 186.493057
+Epoch: [ 1] [   6/ 160] time: 11.9849, loss: 139.567520
+Epoch: [ 1] [   7/ 160] time: 13.2715, loss: 78.590530
+Epoch: [ 1] [   8/ 160] time: 14.5597, loss: 66.722519
+Epoch: [ 1] [   9/ 160] time: 15.8451, loss: 27.664885
+Epoch: [ 1] [  10/ 160] time: 17.1307, loss: 28.955349
+Epoch: [ 1] [  11/ 160] time: 18.8962, loss: 19.395731
+Epoch: [ 1] [  12/ 160] time: 20.1831, loss: 19.977322
+Epoch: [ 1] [  13/ 160] time: 21.4750, loss: 13.377283
+Epoch: [ 1] [  14/ 160] time: 22.7575, loss: 8.883352
+Epoch: [ 1] [  15/ 160] time: 24.0498, loss: 13.219213
+Epoch: [ 1] [  16/ 160] time: 25.8248, loss: 12.792873
+Epoch: [ 1] [  17/ 160] time: 27.1152, loss: 8.662533
+Epoch: [ 1] [  18/ 160] time: 28.4088, loss: 8.528252
+Epoch: [ 1] [  19/ 160] time: 29.6972, loss: 9.900549
+Epoch: [ 1] [  20/ 160] time: 30.9881, loss: 9.210657
+Epoch: [ 1] [  21/ 160] time: 32.8001, loss: 6.124342
+Epoch: [ 1] [  22/ 160] time: 34.0862, loss: 6.621811
+Epoch: [ 1] [  23/ 160] time: 35.3832, loss: 6.404111
+Epoch: [ 1] [  24/ 160] time: 36.6841, loss: 4.900460
+Epoch: [ 1] [  25/ 160] time: 37.9776, loss: 6.269050
+Epoch: [ 1] [  26/ 160] time: 39.9318, loss: 3.780019
+Epoch: [ 1] [  27/ 160] time: 41.2134, loss: 4.987002
+Epoch: [ 1] [  28/ 160] time: 42.5078, loss: 4.941202
+Epoch: [ 1] [  29/ 160] time: 43.7955, loss: 5.406013
+Epoch: [ 1] [  30/ 160] time: 45.0932, loss: 4.895658
+Epoch: [ 1] [  31/ 160] time: 46.9900, loss: 5.020710
+Epoch: [ 1] [  32/ 160] time: 48.2798, loss: 4.065400
+Epoch: [ 1] [  33/ 160] time: 49.5684, loss: 4.350807
+Epoch: [ 1] [  34/ 160] time: 50.8666, loss: 3.339717
+Epoch: [ 1] [  35/ 160] time: 52.1539, loss: 4.703405
+Epoch: [ 1] [  36/ 160] time: 54.0401, loss: 3.370435
+Epoch: [ 1] [  37/ 160] time: 55.3378, loss: 3.807226
+Epoch: [ 1] [  38/ 160] time: 56.6259, loss: 3.688508
+Epoch: [ 1] [  39/ 160] time: 57.9220, loss: 3.227121
+Epoch: [ 1] [  40/ 160] time: 59.2106, loss: 4.367117
+Epoch: [ 1] [  41/ 160] time: 61.0915, loss: 3.758546
+Epoch: [ 1] [  42/ 160] time: 62.3885, loss: 3.270273
+Epoch: [ 1] [  43/ 160] time: 63.6805, loss: 3.547486
+Epoch: [ 1] [  44/ 160] time: 64.9693, loss: 3.195956
+Epoch: [ 1] [  45/ 160] time: 66.2551, loss: 3.956215
+Epoch: [ 1] [  46/ 160] time: 68.1344, loss: 3.732472
+Epoch: [ 1] [  47/ 160] time: 69.4249, loss: 3.246984
+Epoch: [ 1] [  48/ 160] time: 70.7171, loss: 3.190962
+Epoch: [ 1] [  49/ 160] time: 72.0057, loss: 3.214569
+Epoch: [ 1] [  50/ 160] time: 73.2940, loss: 3.589423
+Epoch: [ 1] [  51/ 160] time: 75.1850, loss: 3.650059
+Epoch: [ 1] [  52/ 160] time: 76.4720, loss: 3.176310
+Epoch: [ 1] [  53/ 160] time: 77.7606, loss: 3.282280
+Epoch: [ 1] [  54/ 160] time: 79.0474, loss: 2.830346
+Epoch: [ 1] [  55/ 160] time: 80.3289, loss: 3.345203
+Epoch: [ 1] [  56/ 160] time: 82.2743, loss: 3.194006
+Epoch: [ 1] [  57/ 160] time: 83.5656, loss: 3.108769
+Epoch: [ 1] [  58/ 160] time: 84.8535, loss: 2.981428
+Epoch: [ 1] [  59/ 160] time: 86.1529, loss: 2.734959
+Epoch: [ 1] [  60/ 160] time: 87.4512, loss: 3.385108
+Epoch: [ 1] [  61/ 160] time: 89.3594, loss: 4.689155
+Epoch: [ 1] [  62/ 160] time: 90.6505, loss: 2.626963
+Epoch: [ 1] [  63/ 160] time: 91.9381, loss: 3.278057
+Epoch: [ 1] [  64/ 160] time: 93.2267, loss: 3.146432
+Epoch: [ 1] [  65/ 160] time: 94.5123, loss: 3.349084
+Epoch: [ 1] [  66/ 160] time: 96.4257, loss: 3.491262
+Epoch: [ 1] [  67/ 160] time: 97.7155, loss: 2.874290
+Epoch: [ 1] [  68/ 160] time: 99.0049, loss: 2.713887
+Epoch: [ 1] [  69/ 160] time: 100.2911, loss: 2.836510
+Epoch: [ 1] [  70/ 160] time: 101.5996, loss: 3.369002
+Epoch: [ 1] [  71/ 160] time: 103.6985, loss: 3.054046
+Epoch: [ 1] [  72/ 160] time: 104.9910, loss: 2.863415
+Epoch: [ 1] [  73/ 160] time: 106.2803, loss: 2.989391
+Epoch: [ 1] [  74/ 160] time: 107.5715, loss: 2.642862
+Epoch: [ 1] [  75/ 160] time: 108.8613, loss: 3.119584
+Epoch: [ 1] [  76/ 160] time: 110.8058, loss: 3.089077
+Epoch: [ 1] [  77/ 160] time: 112.0899, loss: 2.621251
+Epoch: [ 1] [  78/ 160] time: 113.3746, loss: 2.962811
+Epoch: [ 1] [  79/ 160] time: 114.6655, loss: 2.660268
+Epoch: [ 1] [  80/ 160] time: 115.9494, loss: 3.178436
+Epoch: [ 1] [  81/ 160] time: 117.9434, loss: 2.778596
+Epoch: [ 1] [  82/ 160] time: 119.2311, loss: 2.759655
+Epoch: [ 1] [  83/ 160] time: 120.5185, loss: 2.882064
+Epoch: [ 1] [  84/ 160] time: 121.8062, loss: 2.552258
+Epoch: [ 1] [  85/ 160] time: 123.0843, loss: 3.124699
+Epoch: [ 1] [  86/ 160] time: 125.0924, loss: 2.631078
+Epoch: [ 1] [  87/ 160] time: 126.3790, loss: 2.609253
+Epoch: [ 1] [  88/ 160] time: 127.6681, loss: 3.027575
+Epoch: [ 1] [  89/ 160] time: 128.9383, loss: 2.432675
+Epoch: [ 1] [  90/ 160] time: 130.2183, loss: 3.179080
+Epoch: [ 1] [  91/ 160] time: 132.2190, loss: 3.199427
+Epoch: [ 1] [  92/ 160] time: 133.5089, loss: 2.558667
+Epoch: [ 1] [  93/ 160] time: 134.8016, loss: 2.806278
+Epoch: [ 1] [  94/ 160] time: 136.0863, loss: 2.874142
+Epoch: [ 1] [  95/ 160] time: 137.3739, loss: 3.097069
+Epoch: [ 1] [  96/ 160] time: 139.3823, loss: 2.787966
+Epoch: [ 1] [  97/ 160] time: 140.6648, loss: 2.587820
+Epoch: [ 1] [  98/ 160] time: 141.9503, loss: 2.894699
+Epoch: [ 1] [  99/ 160] time: 143.2349, loss: 2.722169
+Epoch: [ 1] [ 100/ 160] time: 144.5159, loss: 3.113706
+Epoch: [ 1] [ 101/ 160] time: 146.5557, loss: 3.157418
+Epoch: [ 1] [ 102/ 160] time: 147.8342, loss: 2.541270
+Epoch: [ 1] [ 103/ 160] time: 149.1245, loss: 2.532584
+Epoch: [ 1] [ 104/ 160] time: 150.4082, loss: 2.368263
+Epoch: [ 1] [ 105/ 160] time: 151.6863, loss: 2.907963
+Epoch: [ 1] [ 106/ 160] time: 153.7939, loss: 2.940667
+Epoch: [ 1] [ 107/ 160] time: 155.0780, loss: 2.314021
+Epoch: [ 1] [ 108/ 160] time: 156.3606, loss: 2.584277
+Epoch: [ 1] [ 109/ 160] time: 157.6476, loss: 2.379487
+Epoch: [ 1] [ 110/ 160] time: 158.9344, loss: 2.870170
+Epoch: [ 1] [ 111/ 160] time: 161.0523, loss: 2.607012
+Epoch: [ 1] [ 112/ 160] time: 162.3329, loss: 2.574362
+Epoch: [ 1] [ 113/ 160] time: 163.6124, loss: 2.561345
+Epoch: [ 1] [ 114/ 160] time: 164.8958, loss: 2.332723
+Epoch: [ 1] [ 115/ 160] time: 166.1856, loss: 2.885932
+Epoch: [ 1] [ 116/ 160] time: 168.4163, loss: 3.092155
+Epoch: [ 1] [ 117/ 160] time: 169.7002, loss: 2.732705
+Epoch: [ 1] [ 118/ 160] time: 170.9853, loss: 3.017987
+Epoch: [ 1] [ 119/ 160] time: 172.2674, loss: 2.560822
+Epoch: [ 1] [ 120/ 160] time: 173.5481, loss: 3.129308
+Epoch: [ 1] [ 121/ 160] time: 175.6915, loss: 3.382493
+Epoch: [ 1] [ 122/ 160] time: 176.9794, loss: 2.384148
+Epoch: [ 1] [ 123/ 160] time: 178.2606, loss: 2.937503
+Epoch: [ 1] [ 124/ 160] time: 179.5459, loss: 2.761307
+Epoch: [ 1] [ 125/ 160] time: 180.8325, loss: 3.082693
+Epoch: [ 1] [ 126/ 160] time: 182.9286, loss: 3.326585
+Epoch: [ 1] [ 127/ 160] time: 184.2074, loss: 2.420694
+Epoch: [ 1] [ 128/ 160] time: 185.4914, loss: 2.623260
+Epoch: [ 1] [ 129/ 160] time: 186.7847, loss: 2.997885
+Epoch: [ 1] [ 130/ 160] time: 188.0754, loss: 2.947670
+Epoch: [ 1] [ 131/ 160] time: 190.2314, loss: 2.879868
+Epoch: [ 1] [ 132/ 160] time: 191.5153, loss: 2.695108
+Epoch: [ 1] [ 133/ 160] time: 192.8007, loss: 2.598874
+Epoch: [ 1] [ 134/ 160] time: 194.0830, loss: 2.537161
+Epoch: [ 1] [ 135/ 160] time: 195.3702, loss: 2.971130
+Epoch: [ 1] [ 136/ 160] time: 197.5395, loss: 2.901135
+Epoch: [ 1] [ 137/ 160] time: 198.8265, loss: 2.463024
+Epoch: [ 1] [ 138/ 160] time: 200.1023, loss: 2.478096
+Epoch: [ 1] [ 139/ 160] time: 201.3852, loss: 2.511970
+Epoch: [ 1] [ 140/ 160] time: 202.6657, loss: 2.890346
+Epoch: [ 1] [ 141/ 160] time: 204.8440, loss: 2.813916
+Epoch: [ 1] [ 142/ 160] time: 206.1241, loss: 2.364951
+Epoch: [ 1] [ 143/ 160] time: 207.4089, loss: 2.507189
+Epoch: [ 1] [ 144/ 160] time: 208.6939, loss: 2.623901
+Epoch: [ 1] [ 145/ 160] time: 209.9734, loss: 2.865739
+Epoch: [ 1] [ 146/ 160] time: 212.1841, loss: 3.502719
+Epoch: [ 1] [ 147/ 160] time: 213.4728, loss: 2.384758
+Epoch: [ 1] [ 148/ 160] time: 214.7552, loss: 2.727953
+Epoch: [ 1] [ 149/ 160] time: 216.0384, loss: 2.898041
+Epoch: [ 1] [ 150/ 160] time: 217.3220, loss: 2.958111
+Epoch: [ 1] [ 151/ 160] time: 219.6273, loss: 3.293624
+Epoch: [ 1] [ 152/ 160] time: 220.9098, loss: 2.310372
+Epoch: [ 1] [ 153/ 160] time: 222.1952, loss: 2.807334
+Epoch: [ 1] [ 154/ 160] time: 223.4848, loss: 2.435869
+Epoch: [ 1] [ 155/ 160] time: 224.7714, loss: 2.999258
+Epoch: [ 1] [ 156/ 160] time: 227.1615, loss: 3.364152
+Epoch: [ 1] [ 157/ 160] time: 228.4507, loss: 2.467106
+Epoch: [ 1] [ 158/ 160] time: 229.7357, loss: 3.009688
+Epoch: [ 1] [ 159/ 160] time: 231.0239, loss: 2.447692
+Epoch: [ 1] [ 160/ 160] time: 232.3018, loss: 3.117691
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 25.80
+(1, 180, 180, 1)
+img2 PSNR: 29.55
+(1, 180, 180, 1)
+img3 PSNR: 29.30
+(1, 180, 180, 1)
+img4 PSNR: 29.24
+(1, 180, 180, 1)
+img5 PSNR: 29.17
+(1, 180, 180, 1)
+img6 PSNR: 29.65
+(1, 180, 180, 1)
+img7 PSNR: 29.20
+(1, 180, 180, 1)
+img8 PSNR: 29.18
+(1, 180, 180, 1)
+img9 PSNR: 29.36
+(1, 180, 180, 1)
+img10 PSNR: 28.83
+--- Test ---- Average PSNR 28.93 ---
+[*] Saving model...
+Epoch: [ 2] [   1/ 160] time: 236.5178, loss: 3.068298
+Epoch: [ 2] [   2/ 160] time: 237.8013, loss: 2.407150
+Epoch: [ 2] [   3/ 160] time: 239.0808, loss: 2.753426
+Epoch: [ 2] [   4/ 160] time: 240.3675, loss: 2.555563
+Epoch: [ 2] [   5/ 160] time: 241.6497, loss: 2.887552
+Epoch: [ 2] [   6/ 160] time: 243.9756, loss: 3.303149
+Epoch: [ 2] [   7/ 160] time: 245.2638, loss: 2.384641
+Epoch: [ 2] [   8/ 160] time: 246.5497, loss: 3.031697
+Epoch: [ 2] [   9/ 160] time: 247.8290, loss: 2.661703
+Epoch: [ 2] [  10/ 160] time: 249.1180, loss: 2.903261
+Epoch: [ 2] [  11/ 160] time: 251.3964, loss: 3.251258
+Epoch: [ 2] [  12/ 160] time: 252.6825, loss: 2.226289
+Epoch: [ 2] [  13/ 160] time: 253.9709, loss: 2.665445
+Epoch: [ 2] [  14/ 160] time: 255.2694, loss: 2.589506
+Epoch: [ 2] [  15/ 160] time: 256.5497, loss: 2.734658
+Epoch: [ 2] [  16/ 160] time: 258.8836, loss: 3.047175
+Epoch: [ 2] [  17/ 160] time: 260.1662, loss: 2.319395
+Epoch: [ 2] [  18/ 160] time: 261.4507, loss: 2.688350
+Epoch: [ 2] [  19/ 160] time: 262.7368, loss: 2.613288
+Epoch: [ 2] [  20/ 160] time: 264.0240, loss: 2.760853
+Epoch: [ 2] [  21/ 160] time: 266.4142, loss: 3.057460
+Epoch: [ 2] [  22/ 160] time: 267.6942, loss: 2.288190
+Epoch: [ 2] [  23/ 160] time: 268.9796, loss: 2.549922
+Epoch: [ 2] [  24/ 160] time: 270.2594, loss: 2.457229
+Epoch: [ 2] [  25/ 160] time: 271.5518, loss: 2.718145
+Epoch: [ 2] [  26/ 160] time: 273.8792, loss: 3.270040
+Epoch: [ 2] [  27/ 160] time: 275.1635, loss: 2.311056
+Epoch: [ 2] [  28/ 160] time: 276.4465, loss: 2.884530
+Epoch: [ 2] [  29/ 160] time: 277.7300, loss: 2.340956
+Epoch: [ 2] [  30/ 160] time: 279.0156, loss: 3.003251
+Epoch: [ 2] [  31/ 160] time: 281.5260, loss: 2.902675
+Epoch: [ 2] [  32/ 160] time: 282.8153, loss: 2.265592
+Epoch: [ 2] [  33/ 160] time: 284.0990, loss: 2.835006
+Epoch: [ 2] [  34/ 160] time: 285.3862, loss: 2.273236
+Epoch: [ 2] [  35/ 160] time: 286.6709, loss: 3.088207
+Epoch: [ 2] [  36/ 160] time: 289.0975, loss: 2.850587
+Epoch: [ 2] [  37/ 160] time: 290.3800, loss: 2.381939
+Epoch: [ 2] [  38/ 160] time: 291.6637, loss: 2.931517
+Epoch: [ 2] [  39/ 160] time: 292.9493, loss: 2.265547
+Epoch: [ 2] [  40/ 160] time: 294.2340, loss: 2.905818
+Epoch: [ 2] [  41/ 160] time: 296.7324, loss: 3.142179
+Epoch: [ 2] [  42/ 160] time: 298.0262, loss: 2.508078
+Epoch: [ 2] [  43/ 160] time: 299.3070, loss: 3.259610
+Epoch: [ 2] [  44/ 160] time: 300.5919, loss: 2.298753
+Epoch: [ 2] [  45/ 160] time: 301.8746, loss: 3.295654
+Epoch: [ 2] [  46/ 160] time: 304.3349, loss: 3.098104
+Epoch: [ 2] [  47/ 160] time: 305.6200, loss: 2.546204
+Epoch: [ 2] [  48/ 160] time: 306.9098, loss: 3.172003
+Epoch: [ 2] [  49/ 160] time: 308.1965, loss: 2.300290
+Epoch: [ 2] [  50/ 160] time: 309.4781, loss: 3.195917
+Epoch: [ 2] [  51/ 160] time: 311.8924, loss: 3.268312
+Epoch: [ 2] [  52/ 160] time: 313.1813, loss: 2.307799
+Epoch: [ 2] [  53/ 160] time: 314.4671, loss: 3.392290
+Epoch: [ 2] [  54/ 160] time: 315.7511, loss: 2.244032
+Epoch: [ 2] [  55/ 160] time: 317.0336, loss: 3.244401
+Epoch: [ 2] [  56/ 160] time: 319.4880, loss: 3.436602
+Epoch: [ 2] [  57/ 160] time: 320.7786, loss: 2.457735
+Epoch: [ 2] [  58/ 160] time: 322.0710, loss: 3.840427
+Epoch: [ 2] [  59/ 160] time: 323.3531, loss: 2.163680
+Epoch: [ 2] [  60/ 160] time: 324.6318, loss: 3.507731
+Epoch: [ 2] [  61/ 160] time: 327.0851, loss: 3.117054
+Epoch: [ 2] [  62/ 160] time: 328.3692, loss: 2.590173
+Epoch: [ 2] [  63/ 160] time: 329.6541, loss: 3.556085
+Epoch: [ 2] [  64/ 160] time: 330.9311, loss: 2.178182
+Epoch: [ 2] [  65/ 160] time: 332.2144, loss: 3.629291
+Epoch: [ 2] [  66/ 160] time: 334.7517, loss: 2.920606
+Epoch: [ 2] [  67/ 160] time: 336.0349, loss: 2.638738
+Epoch: [ 2] [  68/ 160] time: 337.3190, loss: 3.726238
+Epoch: [ 2] [  69/ 160] time: 338.6001, loss: 2.276015
+Epoch: [ 2] [  70/ 160] time: 339.8879, loss: 3.848954
+Epoch: [ 2] [  71/ 160] time: 342.3952, loss: 2.800744
+Epoch: [ 2] [  72/ 160] time: 343.6760, loss: 2.874268
+Epoch: [ 2] [  73/ 160] time: 344.9657, loss: 3.241090
+Epoch: [ 2] [  74/ 160] time: 346.2546, loss: 2.244436
+Epoch: [ 2] [  75/ 160] time: 347.5341, loss: 3.702363
+Epoch: [ 2] [  76/ 160] time: 350.2123, loss: 2.891958
+Epoch: [ 2] [  77/ 160] time: 351.5001, loss: 2.833885
+Epoch: [ 2] [  78/ 160] time: 352.7853, loss: 3.412730
+Epoch: [ 2] [  79/ 160] time: 354.0720, loss: 2.261873
+Epoch: [ 2] [  80/ 160] time: 355.3557, loss: 3.752999
+Epoch: [ 2] [  81/ 160] time: 357.9987, loss: 2.827946
+Epoch: [ 2] [  82/ 160] time: 359.2818, loss: 2.717370
+Epoch: [ 2] [  83/ 160] time: 360.5774, loss: 3.392327
+Epoch: [ 2] [  84/ 160] time: 361.8672, loss: 2.217709
+Epoch: [ 2] [  85/ 160] time: 363.1585, loss: 3.352666
+Epoch: [ 2] [  86/ 160] time: 365.7740, loss: 3.013368
+Epoch: [ 2] [  87/ 160] time: 367.0640, loss: 2.593121
+Epoch: [ 2] [  88/ 160] time: 368.3436, loss: 3.416884
+Epoch: [ 2] [  89/ 160] time: 369.6365, loss: 2.250935
+Epoch: [ 2] [  90/ 160] time: 370.9210, loss: 3.360101
+Epoch: [ 2] [  91/ 160] time: 373.6281, loss: 2.977924
+Epoch: [ 2] [  92/ 160] time: 374.9160, loss: 2.543075
+Epoch: [ 2] [  93/ 160] time: 376.2020, loss: 3.342143
+Epoch: [ 2] [  94/ 160] time: 377.4833, loss: 2.172526
+Epoch: [ 2] [  95/ 160] time: 378.7661, loss: 3.314701
+Epoch: [ 2] [  96/ 160] time: 381.3991, loss: 3.080087
+Epoch: [ 2] [  97/ 160] time: 382.6908, loss: 2.560372
+Epoch: [ 2] [  98/ 160] time: 383.9820, loss: 3.102102
+Epoch: [ 2] [  99/ 160] time: 385.2681, loss: 2.239660
+Epoch: [ 2] [ 100/ 160] time: 386.5597, loss: 3.349661
+Epoch: [ 2] [ 101/ 160] time: 389.1949, loss: 3.327246
+Epoch: [ 2] [ 102/ 160] time: 390.4773, loss: 2.485852
+Epoch: [ 2] [ 103/ 160] time: 391.7616, loss: 3.805446
+Epoch: [ 2] [ 104/ 160] time: 393.0475, loss: 2.290264
+Epoch: [ 2] [ 105/ 160] time: 394.3284, loss: 3.806331
+Epoch: [ 2] [ 106/ 160] time: 397.0320, loss: 3.061821
+Epoch: [ 2] [ 107/ 160] time: 398.3177, loss: 2.559682
+Epoch: [ 2] [ 108/ 160] time: 399.6055, loss: 3.680769
+Epoch: [ 2] [ 109/ 160] time: 400.8927, loss: 2.279678
+Epoch: [ 2] [ 110/ 160] time: 402.1723, loss: 3.717388
+Epoch: [ 2] [ 111/ 160] time: 404.8406, loss: 3.265904
+Epoch: [ 2] [ 112/ 160] time: 406.1250, loss: 2.761974
+Epoch: [ 2] [ 113/ 160] time: 407.4136, loss: 3.495757
+Epoch: [ 2] [ 114/ 160] time: 408.6990, loss: 2.140233
+Epoch: [ 2] [ 115/ 160] time: 409.9787, loss: 3.748600
+Epoch: [ 2] [ 116/ 160] time: 412.7238, loss: 2.877701
+Epoch: [ 2] [ 117/ 160] time: 414.0111, loss: 2.592497
+Epoch: [ 2] [ 118/ 160] time: 415.2975, loss: 3.823681
+Epoch: [ 2] [ 119/ 160] time: 416.5773, loss: 2.259030
+Epoch: [ 2] [ 120/ 160] time: 417.8677, loss: 3.694293
+Epoch: [ 2] [ 121/ 160] time: 420.7206, loss: 3.108011
+Epoch: [ 2] [ 122/ 160] time: 422.0030, loss: 2.734461
+Epoch: [ 2] [ 123/ 160] time: 423.2918, loss: 3.627780
+Epoch: [ 2] [ 124/ 160] time: 424.5785, loss: 2.169122
+Epoch: [ 2] [ 125/ 160] time: 425.8621, loss: 3.992102
+Epoch: [ 2] [ 126/ 160] time: 428.7045, loss: 2.759440
+Epoch: [ 2] [ 127/ 160] time: 429.9951, loss: 2.730943
+Epoch: [ 2] [ 128/ 160] time: 431.2862, loss: 3.292688
+Epoch: [ 2] [ 129/ 160] time: 432.5752, loss: 2.164557
+Epoch: [ 2] [ 130/ 160] time: 433.8604, loss: 3.594672
+Epoch: [ 2] [ 131/ 160] time: 436.6957, loss: 2.818551
+Epoch: [ 2] [ 132/ 160] time: 437.9851, loss: 2.754598
+Epoch: [ 2] [ 133/ 160] time: 439.2668, loss: 3.353698
+Epoch: [ 2] [ 134/ 160] time: 440.5593, loss: 2.180148
+Epoch: [ 2] [ 135/ 160] time: 441.8461, loss: 3.561630
+Epoch: [ 2] [ 136/ 160] time: 444.6604, loss: 2.616132
+Epoch: [ 2] [ 137/ 160] time: 445.9475, loss: 2.771674
+Epoch: [ 2] [ 138/ 160] time: 447.2330, loss: 3.336726
+Epoch: [ 2] [ 139/ 160] time: 448.5152, loss: 2.241072
+Epoch: [ 2] [ 140/ 160] time: 449.8009, loss: 3.568003
+Epoch: [ 2] [ 141/ 160] time: 452.4654, loss: 2.558038
+Epoch: [ 2] [ 142/ 160] time: 453.7522, loss: 2.872357
+Epoch: [ 2] [ 143/ 160] time: 455.0358, loss: 2.729094
+Epoch: [ 2] [ 144/ 160] time: 456.3207, loss: 2.151013
+Epoch: [ 2] [ 145/ 160] time: 457.6083, loss: 3.174228
+Epoch: [ 2] [ 146/ 160] time: 460.3799, loss: 2.524124
+Epoch: [ 2] [ 147/ 160] time: 461.6620, loss: 2.545639
+Epoch: [ 2] [ 148/ 160] time: 462.9452, loss: 2.837961
+Epoch: [ 2] [ 149/ 160] time: 464.2315, loss: 2.300166
+Epoch: [ 2] [ 150/ 160] time: 465.5135, loss: 3.104085
+Epoch: [ 2] [ 151/ 160] time: 468.3409, loss: 2.514370
+Epoch: [ 2] [ 152/ 160] time: 469.6278, loss: 2.737942
+Epoch: [ 2] [ 153/ 160] time: 470.9152, loss: 2.840954
+Epoch: [ 2] [ 154/ 160] time: 472.2053, loss: 2.203003
+Epoch: [ 2] [ 155/ 160] time: 473.4873, loss: 3.266459
+Epoch: [ 2] [ 156/ 160] time: 476.3481, loss: 2.705033
+Epoch: [ 2] [ 157/ 160] time: 477.6393, loss: 2.672746
+Epoch: [ 2] [ 158/ 160] time: 478.9292, loss: 3.164805
+Epoch: [ 2] [ 159/ 160] time: 480.2157, loss: 2.265482
+Epoch: [ 2] [ 160/ 160] time: 481.5030, loss: 3.409135
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 25.97
+(1, 180, 180, 1)
+img2 PSNR: 30.10
+(1, 180, 180, 1)
+img3 PSNR: 29.85
+(1, 180, 180, 1)
+img4 PSNR: 29.80
+(1, 180, 180, 1)
+img5 PSNR: 29.72
+(1, 180, 180, 1)
+img6 PSNR: 30.19
+(1, 180, 180, 1)
+img7 PSNR: 29.76
+(1, 180, 180, 1)
+img8 PSNR: 29.74
+(1, 180, 180, 1)
+img9 PSNR: 29.88
+(1, 180, 180, 1)
+img10 PSNR: 29.39
+--- Test ---- Average PSNR 29.44 ---
+[*] Saving model...
+Epoch: [ 3] [   1/ 160] time: 487.1344, loss: 2.579216
+Epoch: [ 3] [   2/ 160] time: 488.4199, loss: 2.761979
+Epoch: [ 3] [   3/ 160] time: 489.6987, loss: 2.974295
+Epoch: [ 3] [   4/ 160] time: 490.9965, loss: 2.134577
+Epoch: [ 3] [   5/ 160] time: 492.2801, loss: 3.715735
+Epoch: [ 3] [   6/ 160] time: 495.1711, loss: 2.569733
+Epoch: [ 3] [   7/ 160] time: 496.4593, loss: 2.911628
+Epoch: [ 3] [   8/ 160] time: 497.7502, loss: 3.074592
+Epoch: [ 3] [   9/ 160] time: 499.0438, loss: 2.276100
+Epoch: [ 3] [  10/ 160] time: 500.3323, loss: 3.677895
+Epoch: [ 3] [  11/ 160] time: 503.2455, loss: 2.451209
+Epoch: [ 3] [  12/ 160] time: 504.5304, loss: 2.912855
+Epoch: [ 3] [  13/ 160] time: 505.8219, loss: 2.925062
+Epoch: [ 3] [  14/ 160] time: 507.1133, loss: 2.504268
+Epoch: [ 3] [  15/ 160] time: 508.4029, loss: 3.571216
+Epoch: [ 3] [  16/ 160] time: 511.3232, loss: 2.436689
+Epoch: [ 3] [  17/ 160] time: 512.6125, loss: 3.160979
+Epoch: [ 3] [  18/ 160] time: 513.9037, loss: 2.578800
+Epoch: [ 3] [  19/ 160] time: 515.1987, loss: 2.416574
+Epoch: [ 3] [  20/ 160] time: 516.4888, loss: 3.437449
+Epoch: [ 3] [  21/ 160] time: 519.4550, loss: 2.456667
+Epoch: [ 3] [  22/ 160] time: 520.7464, loss: 2.895086
+Epoch: [ 3] [  23/ 160] time: 522.0365, loss: 2.765701
+Epoch: [ 3] [  24/ 160] time: 523.3238, loss: 2.477946
+Epoch: [ 3] [  25/ 160] time: 524.6107, loss: 3.485235
+Epoch: [ 3] [  26/ 160] time: 527.5758, loss: 2.477316
+Epoch: [ 3] [  27/ 160] time: 528.8625, loss: 2.886230
+Epoch: [ 3] [  28/ 160] time: 530.1506, loss: 2.958306
+Epoch: [ 3] [  29/ 160] time: 531.4310, loss: 2.539467
+Epoch: [ 3] [  30/ 160] time: 532.7150, loss: 3.268909
+Epoch: [ 3] [  31/ 160] time: 535.6992, loss: 2.735302
+Epoch: [ 3] [  32/ 160] time: 536.9874, loss: 3.035089
+Epoch: [ 3] [  33/ 160] time: 538.2674, loss: 3.206043
+Epoch: [ 3] [  34/ 160] time: 539.5535, loss: 2.568151
+Epoch: [ 3] [  35/ 160] time: 540.8403, loss: 3.625886
+Epoch: [ 3] [  36/ 160] time: 543.8415, loss: 2.730154
+Epoch: [ 3] [  37/ 160] time: 545.1273, loss: 3.642705
+Epoch: [ 3] [  38/ 160] time: 546.4178, loss: 2.968547
+Epoch: [ 3] [  39/ 160] time: 547.7060, loss: 2.571784
+Epoch: [ 3] [  40/ 160] time: 548.9931, loss: 3.697473
+Epoch: [ 3] [  41/ 160] time: 552.1938, loss: 2.416855
+Epoch: [ 3] [  42/ 160] time: 553.4821, loss: 3.052516
+Epoch: [ 3] [  43/ 160] time: 554.7694, loss: 3.276966
+Epoch: [ 3] [  44/ 160] time: 556.0601, loss: 2.506253
+Epoch: [ 3] [  45/ 160] time: 557.3464, loss: 4.122441
+Epoch: [ 3] [  46/ 160] time: 560.4885, loss: 2.387691
+Epoch: [ 3] [  47/ 160] time: 561.7774, loss: 3.421289
+Epoch: [ 3] [  48/ 160] time: 563.0643, loss: 3.390592
+Epoch: [ 3] [  49/ 160] time: 564.3503, loss: 2.433964
+Epoch: [ 3] [  50/ 160] time: 565.6372, loss: 4.180544
+Epoch: [ 3] [  51/ 160] time: 568.7035, loss: 2.506019
+Epoch: [ 3] [  52/ 160] time: 569.9865, loss: 3.385342
+Epoch: [ 3] [  53/ 160] time: 571.2758, loss: 3.091482
+Epoch: [ 3] [  54/ 160] time: 572.5655, loss: 2.364176
+Epoch: [ 3] [  55/ 160] time: 573.8543, loss: 3.770877
+Epoch: [ 3] [  56/ 160] time: 576.9481, loss: 2.443509
+Epoch: [ 3] [  57/ 160] time: 578.2377, loss: 3.373337
+Epoch: [ 3] [  58/ 160] time: 579.5259, loss: 3.101974
+Epoch: [ 3] [  59/ 160] time: 580.8088, loss: 2.476623
+Epoch: [ 3] [  60/ 160] time: 582.0935, loss: 3.823842
+Epoch: [ 3] [  61/ 160] time: 585.2642, loss: 2.380924
+Epoch: [ 3] [  62/ 160] time: 586.5500, loss: 3.276728
+Epoch: [ 3] [  63/ 160] time: 587.8394, loss: 3.180821
+Epoch: [ 3] [  64/ 160] time: 589.1283, loss: 2.406319
+Epoch: [ 3] [  65/ 160] time: 590.4185, loss: 4.062705
+Epoch: [ 3] [  66/ 160] time: 593.4990, loss: 2.421944
+Epoch: [ 3] [  67/ 160] time: 594.7792, loss: 3.255263
+Epoch: [ 3] [  68/ 160] time: 596.0716, loss: 2.777373
+Epoch: [ 3] [  69/ 160] time: 597.3592, loss: 2.403212
+Epoch: [ 3] [  70/ 160] time: 598.6580, loss: 3.548127
+Epoch: [ 3] [  71/ 160] time: 601.6924, loss: 2.193609
+Epoch: [ 3] [  72/ 160] time: 602.9765, loss: 3.272641
+Epoch: [ 3] [  73/ 160] time: 604.2666, loss: 2.742076
+Epoch: [ 3] [  74/ 160] time: 605.5519, loss: 2.621419
+Epoch: [ 3] [  75/ 160] time: 606.8313, loss: 2.917317
+Epoch: [ 3] [  76/ 160] time: 609.9963, loss: 2.486418
+Epoch: [ 3] [  77/ 160] time: 611.2815, loss: 2.847360
+Epoch: [ 3] [  78/ 160] time: 612.5663, loss: 2.395889
+Epoch: [ 3] [  79/ 160] time: 613.8521, loss: 2.383062
+Epoch: [ 3] [  80/ 160] time: 615.1437, loss: 3.058751
+Epoch: [ 3] [  81/ 160] time: 618.4864, loss: 2.348770
+Epoch: [ 3] [  82/ 160] time: 619.7718, loss: 3.019998
+Epoch: [ 3] [  83/ 160] time: 621.0614, loss: 2.260398
+Epoch: [ 3] [  84/ 160] time: 622.3480, loss: 2.263833
+Epoch: [ 3] [  85/ 160] time: 623.6309, loss: 2.852281
+Epoch: [ 3] [  86/ 160] time: 626.8647, loss: 2.238559
+Epoch: [ 3] [  87/ 160] time: 628.1490, loss: 2.787701
+Epoch: [ 3] [  88/ 160] time: 629.4392, loss: 2.452628
+Epoch: [ 3] [  89/ 160] time: 630.7318, loss: 2.446493
+Epoch: [ 3] [  90/ 160] time: 632.0195, loss: 2.930012
+Epoch: [ 3] [  91/ 160] time: 635.2985, loss: 2.204969
+Epoch: [ 3] [  92/ 160] time: 636.5818, loss: 2.939417
+Epoch: [ 3] [  93/ 160] time: 637.8713, loss: 2.479419
+Epoch: [ 3] [  94/ 160] time: 639.1568, loss: 2.524068
+Epoch: [ 3] [  95/ 160] time: 640.4401, loss: 3.231631
+Epoch: [ 3] [  96/ 160] time: 643.7247, loss: 2.391330
+Epoch: [ 3] [  97/ 160] time: 645.0163, loss: 3.239395
+Epoch: [ 3] [  98/ 160] time: 646.3069, loss: 2.667380
+Epoch: [ 3] [  99/ 160] time: 647.5986, loss: 2.499196
+Epoch: [ 3] [ 100/ 160] time: 648.8875, loss: 3.164259
+Epoch: [ 3] [ 101/ 160] time: 652.0633, loss: 2.191849
+Epoch: [ 3] [ 102/ 160] time: 653.3545, loss: 2.798708
+Epoch: [ 3] [ 103/ 160] time: 654.6436, loss: 2.355343
+Epoch: [ 3] [ 104/ 160] time: 655.9325, loss: 2.015763
+Epoch: [ 3] [ 105/ 160] time: 657.2256, loss: 2.930344
+Epoch: [ 3] [ 106/ 160] time: 660.5274, loss: 2.216825
+Epoch: [ 3] [ 107/ 160] time: 661.8091, loss: 2.997602
+Epoch: [ 3] [ 108/ 160] time: 663.0939, loss: 2.391753
+Epoch: [ 3] [ 109/ 160] time: 664.3764, loss: 2.360080
+Epoch: [ 3] [ 110/ 160] time: 665.6675, loss: 2.828122
+Epoch: [ 3] [ 111/ 160] time: 668.9631, loss: 2.321335
+Epoch: [ 3] [ 112/ 160] time: 670.2497, loss: 2.789189
+Epoch: [ 3] [ 113/ 160] time: 671.5392, loss: 2.481293
+Epoch: [ 3] [ 114/ 160] time: 672.8283, loss: 2.223525
+Epoch: [ 3] [ 115/ 160] time: 674.1179, loss: 3.285212
+Epoch: [ 3] [ 116/ 160] time: 677.4691, loss: 2.208881
+Epoch: [ 3] [ 117/ 160] time: 678.7518, loss: 3.515509
+Epoch: [ 3] [ 118/ 160] time: 680.0375, loss: 2.375741
+Epoch: [ 3] [ 119/ 160] time: 681.3270, loss: 2.756347
+Epoch: [ 3] [ 120/ 160] time: 682.6117, loss: 2.831341
+Epoch: [ 3] [ 121/ 160] time: 685.9216, loss: 2.232564
+Epoch: [ 3] [ 122/ 160] time: 687.2053, loss: 2.894709
+Epoch: [ 3] [ 123/ 160] time: 688.4940, loss: 2.384844
+Epoch: [ 3] [ 124/ 160] time: 689.7848, loss: 2.399593
+Epoch: [ 3] [ 125/ 160] time: 691.0760, loss: 3.180638
+Epoch: [ 3] [ 126/ 160] time: 694.3531, loss: 2.046058
+Epoch: [ 3] [ 127/ 160] time: 695.6404, loss: 2.965019
+Epoch: [ 3] [ 128/ 160] time: 696.9320, loss: 2.140303
+Epoch: [ 3] [ 129/ 160] time: 698.2237, loss: 2.159926
+Epoch: [ 3] [ 130/ 160] time: 699.5111, loss: 2.779431
+Epoch: [ 3] [ 131/ 160] time: 703.0850, loss: 2.217255
+Epoch: [ 3] [ 132/ 160] time: 704.3694, loss: 3.217249
+Epoch: [ 3] [ 133/ 160] time: 705.6583, loss: 2.403468
+Epoch: [ 3] [ 134/ 160] time: 706.9479, loss: 2.504506
+Epoch: [ 3] [ 135/ 160] time: 708.2381, loss: 2.995255
+Epoch: [ 3] [ 136/ 160] time: 711.6431, loss: 2.109670
+Epoch: [ 3] [ 137/ 160] time: 712.9325, loss: 3.418778
+Epoch: [ 3] [ 138/ 160] time: 714.2160, loss: 2.314194
+Epoch: [ 3] [ 139/ 160] time: 715.5042, loss: 2.553299
+Epoch: [ 3] [ 140/ 160] time: 716.7965, loss: 3.277901
+Epoch: [ 3] [ 141/ 160] time: 720.2048, loss: 2.024565
+Epoch: [ 3] [ 142/ 160] time: 721.4914, loss: 3.304280
+Epoch: [ 3] [ 143/ 160] time: 722.7720, loss: 2.208027
+Epoch: [ 3] [ 144/ 160] time: 724.0622, loss: 2.473900
+Epoch: [ 3] [ 145/ 160] time: 725.3531, loss: 3.302547
+Epoch: [ 3] [ 146/ 160] time: 728.7990, loss: 2.061560
+Epoch: [ 3] [ 147/ 160] time: 730.0853, loss: 3.494774
+Epoch: [ 3] [ 148/ 160] time: 731.3731, loss: 2.536278
+Epoch: [ 3] [ 149/ 160] time: 732.6660, loss: 2.535547
+Epoch: [ 3] [ 150/ 160] time: 733.9580, loss: 3.430709
+Epoch: [ 3] [ 151/ 160] time: 737.3718, loss: 1.994947
+Epoch: [ 3] [ 152/ 160] time: 738.6593, loss: 3.987986
+Epoch: [ 3] [ 153/ 160] time: 739.9476, loss: 2.331055
+Epoch: [ 3] [ 154/ 160] time: 741.2296, loss: 2.794088
+Epoch: [ 3] [ 155/ 160] time: 742.5195, loss: 3.437400
+Epoch: [ 3] [ 156/ 160] time: 745.9400, loss: 1.841189
+Epoch: [ 3] [ 157/ 160] time: 747.2235, loss: 4.595008
+Epoch: [ 3] [ 158/ 160] time: 748.5119, loss: 1.967624
+Epoch: [ 3] [ 159/ 160] time: 749.8000, loss: 3.353178
+Epoch: [ 3] [ 160/ 160] time: 751.0983, loss: 2.723274
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 26.17
+(1, 180, 180, 1)
+img2 PSNR: 30.30
+(1, 180, 180, 1)
+img3 PSNR: 30.03
+(1, 180, 180, 1)
+img4 PSNR: 29.97
+(1, 180, 180, 1)
+img5 PSNR: 29.87
+(1, 180, 180, 1)
+img6 PSNR: 30.38
+(1, 180, 180, 1)
+img7 PSNR: 29.93
+(1, 180, 180, 1)
+img8 PSNR: 29.90
+(1, 180, 180, 1)
+img9 PSNR: 30.08
+(1, 180, 180, 1)
+img10 PSNR: 29.54
+--- Test ---- Average PSNR 29.62 ---
+[*] Saving model...
+Epoch: [ 4] [   1/ 160] time: 758.0627, loss: 2.127273
+Epoch: [ 4] [   2/ 160] time: 759.3462, loss: 3.063371
+Epoch: [ 4] [   3/ 160] time: 760.6339, loss: 1.997305
+Epoch: [ 4] [   4/ 160] time: 761.9189, loss: 2.567508
+Epoch: [ 4] [   5/ 160] time: 763.2133, loss: 2.830306
+Epoch: [ 4] [   6/ 160] time: 766.7034, loss: 1.901380
+Epoch: [ 4] [   7/ 160] time: 767.9917, loss: 2.601401
+Epoch: [ 4] [   8/ 160] time: 769.2753, loss: 2.192830
+Epoch: [ 4] [   9/ 160] time: 770.5698, loss: 2.327599
+Epoch: [ 4] [  10/ 160] time: 771.8562, loss: 2.797632
+Epoch: [ 4] [  11/ 160] time: 775.5666, loss: 1.921690
+Epoch: [ 4] [  12/ 160] time: 776.8508, loss: 2.863981
+Epoch: [ 4] [  13/ 160] time: 778.1409, loss: 2.330773
+Epoch: [ 4] [  14/ 160] time: 779.4311, loss: 2.064677
+Epoch: [ 4] [  15/ 160] time: 780.7137, loss: 3.039600
+Epoch: [ 4] [  16/ 160] time: 784.3920, loss: 1.825563
+Epoch: [ 4] [  17/ 160] time: 785.6803, loss: 2.705232
+Epoch: [ 4] [  18/ 160] time: 786.9670, loss: 2.337586
+Epoch: [ 4] [  19/ 160] time: 788.2553, loss: 1.738307
+Epoch: [ 4] [  20/ 160] time: 789.5439, loss: 3.608452
+Epoch: [ 4] [  21/ 160] time: 793.1521, loss: 1.939960
+Epoch: [ 4] [  22/ 160] time: 794.4407, loss: 3.231462
+Epoch: [ 4] [  23/ 160] time: 795.7269, loss: 2.660154
+Epoch: [ 4] [  24/ 160] time: 797.0143, loss: 1.850019
+Epoch: [ 4] [  25/ 160] time: 798.3051, loss: 4.106343
+Epoch: [ 4] [  26/ 160] time: 801.9202, loss: 1.889883
+Epoch: [ 4] [  27/ 160] time: 803.2037, loss: 3.161933
+Epoch: [ 4] [  28/ 160] time: 804.4947, loss: 3.340157
+Epoch: [ 4] [  29/ 160] time: 805.7833, loss: 2.238378
+Epoch: [ 4] [  30/ 160] time: 807.0764, loss: 3.930881
+Epoch: [ 4] [  31/ 160] time: 810.6843, loss: 1.947605
+Epoch: [ 4] [  32/ 160] time: 811.9695, loss: 3.234230
+Epoch: [ 4] [  33/ 160] time: 813.2596, loss: 3.061063
+Epoch: [ 4] [  34/ 160] time: 814.5471, loss: 1.990381
+Epoch: [ 4] [  35/ 160] time: 815.8361, loss: 4.107053
+Epoch: [ 4] [  36/ 160] time: 819.4893, loss: 1.864868
+Epoch: [ 4] [  37/ 160] time: 820.7764, loss: 3.168827
+Epoch: [ 4] [  38/ 160] time: 822.0644, loss: 3.361065
+Epoch: [ 4] [  39/ 160] time: 823.3539, loss: 2.038967
+Epoch: [ 4] [  40/ 160] time: 824.6411, loss: 4.085580
+Epoch: [ 4] [  41/ 160] time: 828.2666, loss: 1.805301
+Epoch: [ 4] [  42/ 160] time: 829.5535, loss: 2.862470
+Epoch: [ 4] [  43/ 160] time: 830.8466, loss: 3.601150
+Epoch: [ 4] [  44/ 160] time: 832.1399, loss: 1.776789
+Epoch: [ 4] [  45/ 160] time: 833.4308, loss: 5.085147
+Epoch: [ 4] [  46/ 160] time: 837.1194, loss: 2.033441
+Epoch: [ 4] [  47/ 160] time: 838.4064, loss: 4.013997
+Epoch: [ 4] [  48/ 160] time: 839.6998, loss: 3.538740
+Epoch: [ 4] [  49/ 160] time: 840.9867, loss: 2.135956
+Epoch: [ 4] [  50/ 160] time: 842.2738, loss: 4.848986
+Epoch: [ 4] [  51/ 160] time: 845.9404, loss: 1.861938
+Epoch: [ 4] [  52/ 160] time: 847.2241, loss: 2.864245
+Epoch: [ 4] [  53/ 160] time: 848.5157, loss: 4.632728
+Epoch: [ 4] [  54/ 160] time: 849.8078, loss: 1.696472
+Epoch: [ 4] [  55/ 160] time: 851.1019, loss: 6.077719
+Epoch: [ 4] [  56/ 160] time: 855.0832, loss: 2.327559
+Epoch: [ 4] [  57/ 160] time: 856.3659, loss: 3.594220
+Epoch: [ 4] [  58/ 160] time: 857.6500, loss: 5.373250
+Epoch: [ 4] [  59/ 160] time: 858.9361, loss: 1.687640
+Epoch: [ 4] [  60/ 160] time: 860.2263, loss: 6.487907
+Epoch: [ 4] [  61/ 160] time: 863.9801, loss: 2.550499
+Epoch: [ 4] [  62/ 160] time: 865.2740, loss: 3.490922
+Epoch: [ 4] [  63/ 160] time: 866.5598, loss: 5.679852
+Epoch: [ 4] [  64/ 160] time: 867.8513, loss: 1.460270
+Epoch: [ 4] [  65/ 160] time: 869.1427, loss: 6.217953
+Epoch: [ 4] [  66/ 160] time: 872.9643, loss: 3.167077
+Epoch: [ 4] [  67/ 160] time: 874.2563, loss: 3.124185
+Epoch: [ 4] [  68/ 160] time: 875.5471, loss: 7.364404
+Epoch: [ 4] [  69/ 160] time: 876.8371, loss: 1.495403
+Epoch: [ 4] [  70/ 160] time: 878.1267, loss: 6.115663
+Epoch: [ 4] [  71/ 160] time: 881.9391, loss: 4.380932
+Epoch: [ 4] [  72/ 160] time: 883.2287, loss: 2.897206
+Epoch: [ 4] [  73/ 160] time: 884.5163, loss: 9.340345
+Epoch: [ 4] [  74/ 160] time: 885.8056, loss: 1.555140
+Epoch: [ 4] [  75/ 160] time: 887.0976, loss: 7.501057
+Epoch: [ 4] [  76/ 160] time: 890.9272, loss: 5.698345
+Epoch: [ 4] [  77/ 160] time: 892.2147, loss: 2.706401
+Epoch: [ 4] [  78/ 160] time: 893.5088, loss: 8.561047
+Epoch: [ 4] [  79/ 160] time: 894.7995, loss: 1.884918
+Epoch: [ 4] [  80/ 160] time: 896.0895, loss: 4.813928
+Epoch: [ 4] [  81/ 160] time: 899.8956, loss: 6.855910
+Epoch: [ 4] [  82/ 160] time: 901.1870, loss: 1.782096
+Epoch: [ 4] [  83/ 160] time: 902.4772, loss: 7.486143
+Epoch: [ 4] [  84/ 160] time: 903.7687, loss: 2.997610
+Epoch: [ 4] [  85/ 160] time: 905.0588, loss: 4.499767
+Epoch: [ 4] [  86/ 160] time: 908.8542, loss: 7.973322
+Epoch: [ 4] [  87/ 160] time: 910.1400, loss: 1.572288
+Epoch: [ 4] [  88/ 160] time: 911.4284, loss: 8.678376
+Epoch: [ 4] [  89/ 160] time: 912.7217, loss: 3.657359
+Epoch: [ 4] [  90/ 160] time: 914.0132, loss: 3.522270
+Epoch: [ 4] [  91/ 160] time: 917.9884, loss: 8.006551
+Epoch: [ 4] [  92/ 160] time: 919.2724, loss: 1.631753
+Epoch: [ 4] [  93/ 160] time: 920.5585, loss: 6.573716
+Epoch: [ 4] [  94/ 160] time: 921.8489, loss: 4.618406
+Epoch: [ 4] [  95/ 160] time: 923.1348, loss: 1.872270
+Epoch: [ 4] [  96/ 160] time: 926.9609, loss: 7.012200
+Epoch: [ 4] [  97/ 160] time: 928.2486, loss: 2.080822
+Epoch: [ 4] [  98/ 160] time: 929.5334, loss: 2.574277
+Epoch: [ 4] [  99/ 160] time: 930.8210, loss: 5.288120
+Epoch: [ 4] [ 100/ 160] time: 932.1073, loss: 1.789592
+Epoch: [ 4] [ 101/ 160] time: 936.0878, loss: 4.484457
+Epoch: [ 4] [ 102/ 160] time: 937.3739, loss: 3.884054
+Epoch: [ 4] [ 103/ 160] time: 938.6584, loss: 2.056503
+Epoch: [ 4] [ 104/ 160] time: 939.9454, loss: 4.204006
+Epoch: [ 4] [ 105/ 160] time: 941.2317, loss: 1.848838
+Epoch: [ 4] [ 106/ 160] time: 945.1409, loss: 3.260163
+Epoch: [ 4] [ 107/ 160] time: 946.4254, loss: 3.342555
+Epoch: [ 4] [ 108/ 160] time: 947.7098, loss: 1.635501
+Epoch: [ 4] [ 109/ 160] time: 948.9990, loss: 4.081861
+Epoch: [ 4] [ 110/ 160] time: 950.2886, loss: 1.654189
+Epoch: [ 4] [ 111/ 160] time: 954.2491, loss: 3.138042
+Epoch: [ 4] [ 112/ 160] time: 955.5310, loss: 3.194474
+Epoch: [ 4] [ 113/ 160] time: 956.8199, loss: 1.650696
+Epoch: [ 4] [ 114/ 160] time: 958.1115, loss: 3.453710
+Epoch: [ 4] [ 115/ 160] time: 959.4062, loss: 1.662698
+Epoch: [ 4] [ 116/ 160] time: 963.3569, loss: 2.887242
+Epoch: [ 4] [ 117/ 160] time: 964.6413, loss: 2.499282
+Epoch: [ 4] [ 118/ 160] time: 965.9334, loss: 1.396269
+Epoch: [ 4] [ 119/ 160] time: 967.2242, loss: 3.096625
+Epoch: [ 4] [ 120/ 160] time: 968.5146, loss: 1.729133
+Epoch: [ 4] [ 121/ 160] time: 972.4101, loss: 2.620703
+Epoch: [ 4] [ 122/ 160] time: 973.6946, loss: 2.158741
+Epoch: [ 4] [ 123/ 160] time: 974.9808, loss: 1.507136
+Epoch: [ 4] [ 124/ 160] time: 976.2731, loss: 2.276366
+Epoch: [ 4] [ 125/ 160] time: 977.5660, loss: 1.539586
+Epoch: [ 4] [ 126/ 160] time: 981.5065, loss: 2.129964
+Epoch: [ 4] [ 127/ 160] time: 982.7970, loss: 1.493345
+Epoch: [ 4] [ 128/ 160] time: 984.0854, loss: 1.181017
+Epoch: [ 4] [ 129/ 160] time: 985.3776, loss: 1.705819
+Epoch: [ 4] [ 130/ 160] time: 986.6728, loss: 1.762280
+Epoch: [ 4] [ 131/ 160] time: 990.7042, loss: 1.563986
+Epoch: [ 4] [ 132/ 160] time: 991.9923, loss: 1.582884
+Epoch: [ 4] [ 133/ 160] time: 993.2788, loss: 1.217388
+Epoch: [ 4] [ 134/ 160] time: 994.5710, loss: 1.333661
+Epoch: [ 4] [ 135/ 160] time: 995.8591, loss: 1.614536
+Epoch: [ 4] [ 136/ 160] time: 999.8598, loss: 1.428566
+Epoch: [ 4] [ 137/ 160] time: 1001.1419, loss: 1.531947
+Epoch: [ 4] [ 138/ 160] time: 1002.4289, loss: 1.218083
+Epoch: [ 4] [ 139/ 160] time: 1003.7180, loss: 1.397476
+Epoch: [ 4] [ 140/ 160] time: 1004.9990, loss: 1.460189
+Epoch: [ 4] [ 141/ 160] time: 1009.0739, loss: 1.263388
+Epoch: [ 4] [ 142/ 160] time: 1010.3669, loss: 1.562144
+Epoch: [ 4] [ 143/ 160] time: 1011.6501, loss: 1.160206
+Epoch: [ 4] [ 144/ 160] time: 1012.9437, loss: 1.241318
+Epoch: [ 4] [ 145/ 160] time: 1014.2323, loss: 1.438776
+Epoch: [ 4] [ 146/ 160] time: 1018.2941, loss: 1.394817
+Epoch: [ 4] [ 147/ 160] time: 1019.5764, loss: 1.693973
+Epoch: [ 4] [ 148/ 160] time: 1020.8634, loss: 1.348749
+Epoch: [ 4] [ 149/ 160] time: 1022.1535, loss: 1.432799
+Epoch: [ 4] [ 150/ 160] time: 1023.4385, loss: 1.416591
+Epoch: [ 4] [ 151/ 160] time: 1027.6313, loss: 1.528073
+Epoch: [ 4] [ 152/ 160] time: 1028.9098, loss: 1.398350
+Epoch: [ 4] [ 153/ 160] time: 1030.2029, loss: 1.359202
+Epoch: [ 4] [ 154/ 160] time: 1031.4961, loss: 1.391332
+Epoch: [ 4] [ 155/ 160] time: 1032.7857, loss: 1.304938
+Epoch: [ 4] [ 156/ 160] time: 1036.9042, loss: 1.606178
+Epoch: [ 4] [ 157/ 160] time: 1038.1990, loss: 1.489434
+Epoch: [ 4] [ 158/ 160] time: 1039.4921, loss: 1.692814
+Epoch: [ 4] [ 159/ 160] time: 1040.7832, loss: 1.548119
+Epoch: [ 4] [ 160/ 160] time: 1042.0784, loss: 1.582797
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 24.25
+(1, 180, 180, 1)
+img2 PSNR: 33.20
+(1, 180, 180, 1)
+img3 PSNR: 33.04
+(1, 180, 180, 1)
+img4 PSNR: 32.60
+(1, 180, 180, 1)
+img5 PSNR: 32.72
+(1, 180, 180, 1)
+img6 PSNR: 32.98
+(1, 180, 180, 1)
+img7 PSNR: 33.02
+(1, 180, 180, 1)
+img8 PSNR: 32.90
+(1, 180, 180, 1)
+img9 PSNR: 32.81
+(1, 180, 180, 1)
+img10 PSNR: 32.57
+--- Test ---- Average PSNR 32.01 ---
+[*] Saving model...
+Epoch: [ 5] [   1/ 160] time: 1050.3467, loss: 1.702680
+Epoch: [ 5] [   2/ 160] time: 1051.6328, loss: 1.199687
+Epoch: [ 5] [   3/ 160] time: 1052.9206, loss: 1.485699
+Epoch: [ 5] [   4/ 160] time: 1054.2102, loss: 1.369023
+Epoch: [ 5] [   5/ 160] time: 1055.4998, loss: 1.388429
+Epoch: [ 5] [   6/ 160] time: 1059.5569, loss: 1.697413
+Epoch: [ 5] [   7/ 160] time: 1060.8443, loss: 1.349568
+Epoch: [ 5] [   8/ 160] time: 1062.1322, loss: 1.657227
+Epoch: [ 5] [   9/ 160] time: 1063.4182, loss: 1.356071
+Epoch: [ 5] [  10/ 160] time: 1064.6984, loss: 1.371805
+Epoch: [ 5] [  11/ 160] time: 1068.8403, loss: 1.941259
+Epoch: [ 5] [  12/ 160] time: 1070.1245, loss: 1.384563
+Epoch: [ 5] [  13/ 160] time: 1071.4122, loss: 1.827937
+Epoch: [ 5] [  14/ 160] time: 1072.7014, loss: 1.569625
+Epoch: [ 5] [  15/ 160] time: 1073.9896, loss: 1.362386
+Epoch: [ 5] [  16/ 160] time: 1078.0726, loss: 2.277359
+Epoch: [ 5] [  17/ 160] time: 1079.3595, loss: 1.309705
+Epoch: [ 5] [  18/ 160] time: 1080.6526, loss: 2.289668
+Epoch: [ 5] [  19/ 160] time: 1081.9362, loss: 1.697329
+Epoch: [ 5] [  20/ 160] time: 1083.2226, loss: 1.462615
+Epoch: [ 5] [  21/ 160] time: 1087.3988, loss: 2.514062
+Epoch: [ 5] [  22/ 160] time: 1088.6836, loss: 1.096389
+Epoch: [ 5] [  23/ 160] time: 1089.9792, loss: 1.851437
+Epoch: [ 5] [  24/ 160] time: 1091.2658, loss: 1.712068
+Epoch: [ 5] [  25/ 160] time: 1092.5650, loss: 1.317867
+Epoch: [ 5] [  26/ 160] time: 1096.8411, loss: 2.311105
+Epoch: [ 5] [  27/ 160] time: 1098.1352, loss: 1.433801
+Epoch: [ 5] [  28/ 160] time: 1099.4276, loss: 1.843729
+Epoch: [ 5] [  29/ 160] time: 1100.7158, loss: 1.997661
+Epoch: [ 5] [  30/ 160] time: 1102.0038, loss: 1.411200
+Epoch: [ 5] [  31/ 160] time: 1106.0695, loss: 2.330607
+Epoch: [ 5] [  32/ 160] time: 1107.3523, loss: 1.304414
+Epoch: [ 5] [  33/ 160] time: 1108.6395, loss: 1.669263
+Epoch: [ 5] [  34/ 160] time: 1109.9274, loss: 1.762426
+Epoch: [ 5] [  35/ 160] time: 1111.2128, loss: 1.265082
+Epoch: [ 5] [  36/ 160] time: 1115.4842, loss: 2.462108
+Epoch: [ 5] [  37/ 160] time: 1116.7662, loss: 1.329651
+Epoch: [ 5] [  38/ 160] time: 1118.0560, loss: 1.723923
+Epoch: [ 5] [  39/ 160] time: 1119.3511, loss: 1.822652
+Epoch: [ 5] [  40/ 160] time: 1120.6464, loss: 1.364717
+Epoch: [ 5] [  41/ 160] time: 1124.8410, loss: 2.437588
+Epoch: [ 5] [  42/ 160] time: 1126.1322, loss: 1.432183
+Epoch: [ 5] [  43/ 160] time: 1127.4191, loss: 1.791934
+Epoch: [ 5] [  44/ 160] time: 1128.7086, loss: 1.955342
+Epoch: [ 5] [  45/ 160] time: 1129.9998, loss: 1.320768
+Epoch: [ 5] [  46/ 160] time: 1134.2167, loss: 2.345582
+Epoch: [ 5] [  47/ 160] time: 1135.5043, loss: 1.372285
+Epoch: [ 5] [  48/ 160] time: 1136.7961, loss: 1.660396
+Epoch: [ 5] [  49/ 160] time: 1138.0865, loss: 1.795928
+Epoch: [ 5] [  50/ 160] time: 1139.3798, loss: 1.282749
+Epoch: [ 5] [  51/ 160] time: 1143.5529, loss: 2.039812
+Epoch: [ 5] [  52/ 160] time: 1144.8375, loss: 1.460991
+Epoch: [ 5] [  53/ 160] time: 1146.1258, loss: 1.689336
+Epoch: [ 5] [  54/ 160] time: 1147.4138, loss: 1.671627
+Epoch: [ 5] [  55/ 160] time: 1148.7018, loss: 1.291306
+Epoch: [ 5] [  56/ 160] time: 1152.9740, loss: 2.128700
+Epoch: [ 5] [  57/ 160] time: 1154.2592, loss: 1.362380
+Epoch: [ 5] [  58/ 160] time: 1155.5461, loss: 1.638162
+Epoch: [ 5] [  59/ 160] time: 1156.8349, loss: 1.600493
+Epoch: [ 5] [  60/ 160] time: 1158.1210, loss: 1.262637
+Epoch: [ 5] [  61/ 160] time: 1162.3533, loss: 2.033551
+Epoch: [ 5] [  62/ 160] time: 1163.6381, loss: 1.304493
+Epoch: [ 5] [  63/ 160] time: 1164.9267, loss: 1.626537
+Epoch: [ 5] [  64/ 160] time: 1166.2202, loss: 1.521900
+Epoch: [ 5] [  65/ 160] time: 1167.5027, loss: 1.397076
+Epoch: [ 5] [  66/ 160] time: 1171.7258, loss: 1.746725
+Epoch: [ 5] [  67/ 160] time: 1173.0122, loss: 1.207213
+Epoch: [ 5] [  68/ 160] time: 1174.3014, loss: 1.331644
+Epoch: [ 5] [  69/ 160] time: 1175.5951, loss: 1.544894
+Epoch: [ 5] [  70/ 160] time: 1176.8826, loss: 1.160231
+Epoch: [ 5] [  71/ 160] time: 1181.2689, loss: 1.845885
+Epoch: [ 5] [  72/ 160] time: 1182.5565, loss: 1.353153
+Epoch: [ 5] [  73/ 160] time: 1183.8465, loss: 1.298165
+Epoch: [ 5] [  74/ 160] time: 1185.1335, loss: 1.525357
+Epoch: [ 5] [  75/ 160] time: 1186.4183, loss: 1.280510
+Epoch: [ 5] [  76/ 160] time: 1190.7597, loss: 1.808446
+Epoch: [ 5] [  77/ 160] time: 1192.0440, loss: 1.315810
+Epoch: [ 5] [  78/ 160] time: 1193.3279, loss: 1.466158
+Epoch: [ 5] [  79/ 160] time: 1194.6145, loss: 1.453275
+Epoch: [ 5] [  80/ 160] time: 1195.9064, loss: 1.319580
+Epoch: [ 5] [  81/ 160] time: 1200.3951, loss: 1.753610
+Epoch: [ 5] [  82/ 160] time: 1201.6845, loss: 1.141474
+Epoch: [ 5] [  83/ 160] time: 1202.9795, loss: 1.474982
+Epoch: [ 5] [  84/ 160] time: 1204.2781, loss: 1.195412
+Epoch: [ 5] [  85/ 160] time: 1205.5685, loss: 1.205746
+Epoch: [ 5] [  86/ 160] time: 1210.2016, loss: 1.700383
+Epoch: [ 5] [  87/ 160] time: 1211.4858, loss: 0.951378
+Epoch: [ 5] [  88/ 160] time: 1212.7759, loss: 1.584055
+Epoch: [ 5] [  89/ 160] time: 1214.0675, loss: 1.031228
+Epoch: [ 5] [  90/ 160] time: 1215.3589, loss: 1.238748
+Epoch: [ 5] [  91/ 160] time: 1219.8444, loss: 1.594221
+Epoch: [ 5] [  92/ 160] time: 1221.1291, loss: 0.976868
+Epoch: [ 5] [  93/ 160] time: 1222.4197, loss: 1.520902
+Epoch: [ 5] [  94/ 160] time: 1223.7084, loss: 1.099955
+Epoch: [ 5] [  95/ 160] time: 1225.0029, loss: 1.269594
+Epoch: [ 5] [  96/ 160] time: 1229.4969, loss: 1.520435
+Epoch: [ 5] [  97/ 160] time: 1230.7867, loss: 1.031840
+Epoch: [ 5] [  98/ 160] time: 1232.0788, loss: 1.408741
+Epoch: [ 5] [  99/ 160] time: 1233.3657, loss: 1.064938
+Epoch: [ 5] [ 100/ 160] time: 1234.6512, loss: 1.305351
+Epoch: [ 5] [ 101/ 160] time: 1239.2347, loss: 1.580112
+Epoch: [ 5] [ 102/ 160] time: 1240.5195, loss: 1.059054
+Epoch: [ 5] [ 103/ 160] time: 1241.8079, loss: 1.523758
+Epoch: [ 5] [ 104/ 160] time: 1243.1014, loss: 1.081827
+Epoch: [ 5] [ 105/ 160] time: 1244.3941, loss: 1.327641
+Epoch: [ 5] [ 106/ 160] time: 1248.8572, loss: 1.451726
+Epoch: [ 5] [ 107/ 160] time: 1250.1465, loss: 0.943838
+Epoch: [ 5] [ 108/ 160] time: 1251.4308, loss: 1.528547
+Epoch: [ 5] [ 109/ 160] time: 1252.7211, loss: 1.013671
+Epoch: [ 5] [ 110/ 160] time: 1254.0115, loss: 1.188923
+Epoch: [ 5] [ 111/ 160] time: 1258.4539, loss: 1.534472
+Epoch: [ 5] [ 112/ 160] time: 1259.7394, loss: 0.995345
+Epoch: [ 5] [ 113/ 160] time: 1261.0314, loss: 1.389465
+Epoch: [ 5] [ 114/ 160] time: 1262.3236, loss: 1.048067
+Epoch: [ 5] [ 115/ 160] time: 1263.6113, loss: 1.278024
+Epoch: [ 5] [ 116/ 160] time: 1268.1229, loss: 1.399539
+Epoch: [ 5] [ 117/ 160] time: 1269.4085, loss: 0.987864
+Epoch: [ 5] [ 118/ 160] time: 1270.7019, loss: 1.268503
+Epoch: [ 5] [ 119/ 160] time: 1271.9885, loss: 1.021269
+Epoch: [ 5] [ 120/ 160] time: 1273.2780, loss: 1.287039
+Epoch: [ 5] [ 121/ 160] time: 1278.0310, loss: 1.530185
+Epoch: [ 5] [ 122/ 160] time: 1279.3183, loss: 1.032950
+Epoch: [ 5] [ 123/ 160] time: 1280.6087, loss: 1.447574
+Epoch: [ 5] [ 124/ 160] time: 1281.8970, loss: 0.987689
+Epoch: [ 5] [ 125/ 160] time: 1283.1875, loss: 1.278110
+Epoch: [ 5] [ 126/ 160] time: 1287.6970, loss: 1.443102
+Epoch: [ 5] [ 127/ 160] time: 1288.9799, loss: 1.049093
+Epoch: [ 5] [ 128/ 160] time: 1290.2682, loss: 1.484172
+Epoch: [ 5] [ 129/ 160] time: 1291.5616, loss: 1.058851
+Epoch: [ 5] [ 130/ 160] time: 1292.8500, loss: 1.321472
+Epoch: [ 5] [ 131/ 160] time: 1297.4005, loss: 1.474944
+Epoch: [ 5] [ 132/ 160] time: 1298.6875, loss: 0.990654
+Epoch: [ 5] [ 133/ 160] time: 1299.9740, loss: 1.430410
+Epoch: [ 5] [ 134/ 160] time: 1301.2633, loss: 1.048058
+Epoch: [ 5] [ 135/ 160] time: 1302.5482, loss: 1.245065
+Epoch: [ 5] [ 136/ 160] time: 1307.4320, loss: 1.763423
+Epoch: [ 5] [ 137/ 160] time: 1308.7138, loss: 0.990058
+Epoch: [ 5] [ 138/ 160] time: 1310.0010, loss: 1.730271
+Epoch: [ 5] [ 139/ 160] time: 1311.2907, loss: 1.005237
+Epoch: [ 5] [ 140/ 160] time: 1312.5879, loss: 1.405127
+Epoch: [ 5] [ 141/ 160] time: 1317.4184, loss: 1.578643
+Epoch: [ 5] [ 142/ 160] time: 1318.7082, loss: 0.973528
+Epoch: [ 5] [ 143/ 160] time: 1320.0018, loss: 1.616883
+Epoch: [ 5] [ 144/ 160] time: 1321.2909, loss: 0.985187
+Epoch: [ 5] [ 145/ 160] time: 1322.5748, loss: 1.356375
+Epoch: [ 5] [ 146/ 160] time: 1327.0012, loss: 1.530959
+Epoch: [ 5] [ 147/ 160] time: 1328.2842, loss: 0.946294
+Epoch: [ 5] [ 148/ 160] time: 1329.5725, loss: 1.594309
+Epoch: [ 5] [ 149/ 160] time: 1330.8641, loss: 0.963154
+Epoch: [ 5] [ 150/ 160] time: 1332.1562, loss: 1.419204
+Epoch: [ 5] [ 151/ 160] time: 1336.5810, loss: 1.466457
+Epoch: [ 5] [ 152/ 160] time: 1337.8658, loss: 1.015107
+Epoch: [ 5] [ 153/ 160] time: 1339.1566, loss: 1.643622
+Epoch: [ 5] [ 154/ 160] time: 1340.4453, loss: 0.964720
+Epoch: [ 5] [ 155/ 160] time: 1341.7347, loss: 1.237941
+Epoch: [ 5] [ 156/ 160] time: 1346.4096, loss: 1.477074
+Epoch: [ 5] [ 157/ 160] time: 1347.6908, loss: 0.933552
+Epoch: [ 5] [ 158/ 160] time: 1348.9820, loss: 1.673432
+Epoch: [ 5] [ 159/ 160] time: 1350.2729, loss: 0.960195
+Epoch: [ 5] [ 160/ 160] time: 1351.5653, loss: 1.298306
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 19.27
+(1, 180, 180, 1)
+img2 PSNR: 35.12
+(1, 180, 180, 1)
+img3 PSNR: 34.95
+(1, 180, 180, 1)
+img4 PSNR: 32.65
+(1, 180, 180, 1)
+img5 PSNR: 33.85
+(1, 180, 180, 1)
+img6 PSNR: 34.64
+(1, 180, 180, 1)
+img7 PSNR: 34.93
+(1, 180, 180, 1)
+img8 PSNR: 34.59
+(1, 180, 180, 1)
+img9 PSNR: 34.46
+(1, 180, 180, 1)
+img10 PSNR: 34.03
+--- Test ---- Average PSNR 32.85 ---
+[*] Saving model...
+Epoch: [ 6] [   1/ 160] time: 1360.7291, loss: 1.466183
+Epoch: [ 6] [   2/ 160] time: 1362.0139, loss: 0.922318
+Epoch: [ 6] [   3/ 160] time: 1363.3052, loss: 1.560521
+Epoch: [ 6] [   4/ 160] time: 1364.5970, loss: 0.935212
+Epoch: [ 6] [   5/ 160] time: 1365.8904, loss: 1.345000
+Epoch: [ 6] [   6/ 160] time: 1370.4727, loss: 1.484596
+Epoch: [ 6] [   7/ 160] time: 1371.7582, loss: 0.886018
+Epoch: [ 6] [   8/ 160] time: 1373.0450, loss: 1.523463
+Epoch: [ 6] [   9/ 160] time: 1374.3325, loss: 0.927848
+Epoch: [ 6] [  10/ 160] time: 1375.6171, loss: 1.321371
+Epoch: [ 6] [  11/ 160] time: 1380.3101, loss: 1.490636
+Epoch: [ 6] [  12/ 160] time: 1381.5987, loss: 0.935705
+Epoch: [ 6] [  13/ 160] time: 1382.8865, loss: 1.567013
+Epoch: [ 6] [  14/ 160] time: 1384.1695, loss: 0.933426
+Epoch: [ 6] [  15/ 160] time: 1385.4567, loss: 1.328433
+Epoch: [ 6] [  16/ 160] time: 1390.0137, loss: 1.503326
+Epoch: [ 6] [  17/ 160] time: 1391.2988, loss: 0.933867
+Epoch: [ 6] [  18/ 160] time: 1392.5878, loss: 1.421791
+Epoch: [ 6] [  19/ 160] time: 1393.8775, loss: 0.960130
+Epoch: [ 6] [  20/ 160] time: 1395.1748, loss: 1.275441
+Epoch: [ 6] [  21/ 160] time: 1399.9618, loss: 1.410252
+Epoch: [ 6] [  22/ 160] time: 1401.2517, loss: 0.976982
+Epoch: [ 6] [  23/ 160] time: 1402.5437, loss: 1.514607
+Epoch: [ 6] [  24/ 160] time: 1403.8309, loss: 0.914956
+Epoch: [ 6] [  25/ 160] time: 1405.1187, loss: 1.351862
+Epoch: [ 6] [  26/ 160] time: 1409.7883, loss: 1.371561
+Epoch: [ 6] [  27/ 160] time: 1411.0769, loss: 0.972297
+Epoch: [ 6] [  28/ 160] time: 1412.3636, loss: 1.615804
+Epoch: [ 6] [  29/ 160] time: 1413.6498, loss: 0.926901
+Epoch: [ 6] [  30/ 160] time: 1414.9397, loss: 1.425828
+Epoch: [ 6] [  31/ 160] time: 1419.7140, loss: 1.167660
+Epoch: [ 6] [  32/ 160] time: 1420.9987, loss: 0.890263
+Epoch: [ 6] [  33/ 160] time: 1422.2880, loss: 1.431611
+Epoch: [ 6] [  34/ 160] time: 1423.5762, loss: 0.880151
+Epoch: [ 6] [  35/ 160] time: 1424.8672, loss: 1.331037
+Epoch: [ 6] [  36/ 160] time: 1429.5857, loss: 1.195277
+Epoch: [ 6] [  37/ 160] time: 1430.8687, loss: 0.963935
+Epoch: [ 6] [  38/ 160] time: 1432.1569, loss: 1.249424
+Epoch: [ 6] [  39/ 160] time: 1433.4471, loss: 0.855120
+Epoch: [ 6] [  40/ 160] time: 1434.7389, loss: 1.344089
+Epoch: [ 6] [  41/ 160] time: 1439.5927, loss: 1.162592
+Epoch: [ 6] [  42/ 160] time: 1440.8797, loss: 0.954106
+Epoch: [ 6] [  43/ 160] time: 1442.1718, loss: 1.252063
+Epoch: [ 6] [  44/ 160] time: 1443.4632, loss: 0.824020
+Epoch: [ 6] [  45/ 160] time: 1444.7542, loss: 1.320435
+Epoch: [ 6] [  46/ 160] time: 1449.4805, loss: 1.083371
+Epoch: [ 6] [  47/ 160] time: 1450.7717, loss: 0.905303
+Epoch: [ 6] [  48/ 160] time: 1452.0588, loss: 1.213822
+Epoch: [ 6] [  49/ 160] time: 1453.3489, loss: 0.887657
+Epoch: [ 6] [  50/ 160] time: 1454.6388, loss: 1.166839
+Epoch: [ 6] [  51/ 160] time: 1459.5783, loss: 1.098648
+Epoch: [ 6] [  52/ 160] time: 1460.8647, loss: 0.954931
+Epoch: [ 6] [  53/ 160] time: 1462.1579, loss: 1.174975
+Epoch: [ 6] [  54/ 160] time: 1463.4466, loss: 0.846830
+Epoch: [ 6] [  55/ 160] time: 1464.7391, loss: 1.273333
+Epoch: [ 6] [  56/ 160] time: 1469.7117, loss: 1.109037
+Epoch: [ 6] [  57/ 160] time: 1471.0077, loss: 0.952556
+Epoch: [ 6] [  58/ 160] time: 1472.2934, loss: 1.192079
+Epoch: [ 6] [  59/ 160] time: 1473.5818, loss: 0.790270
+Epoch: [ 6] [  60/ 160] time: 1474.8689, loss: 1.222354
+Epoch: [ 6] [  61/ 160] time: 1479.8147, loss: 0.984321
+Epoch: [ 6] [  62/ 160] time: 1481.1049, loss: 0.920634
+Epoch: [ 6] [  63/ 160] time: 1482.3939, loss: 1.198412
+Epoch: [ 6] [  64/ 160] time: 1483.6875, loss: 0.808168
+Epoch: [ 6] [  65/ 160] time: 1484.9814, loss: 1.189019
+Epoch: [ 6] [  66/ 160] time: 1490.0399, loss: 1.031568
+Epoch: [ 6] [  67/ 160] time: 1491.3333, loss: 0.941946
+Epoch: [ 6] [  68/ 160] time: 1492.6255, loss: 1.167904
+Epoch: [ 6] [  69/ 160] time: 1493.9204, loss: 0.854147
+Epoch: [ 6] [  70/ 160] time: 1495.2088, loss: 1.193169
+Epoch: [ 6] [  71/ 160] time: 1499.9483, loss: 0.954432
+Epoch: [ 6] [  72/ 160] time: 1501.2405, loss: 0.934481
+Epoch: [ 6] [  73/ 160] time: 1502.5234, loss: 1.057570
+Epoch: [ 6] [  74/ 160] time: 1503.8159, loss: 0.837535
+Epoch: [ 6] [  75/ 160] time: 1505.1022, loss: 1.237066
+Epoch: [ 6] [  76/ 160] time: 1510.2236, loss: 0.946759
+Epoch: [ 6] [  77/ 160] time: 1511.5055, loss: 0.966692
+Epoch: [ 6] [  78/ 160] time: 1512.7984, loss: 0.956017
+Epoch: [ 6] [  79/ 160] time: 1514.0912, loss: 0.841078
+Epoch: [ 6] [  80/ 160] time: 1515.3825, loss: 1.121205
+Epoch: [ 6] [  81/ 160] time: 1520.2209, loss: 1.032075
+Epoch: [ 6] [  82/ 160] time: 1521.5035, loss: 1.006859
+Epoch: [ 6] [  83/ 160] time: 1522.7899, loss: 1.108727
+Epoch: [ 6] [  84/ 160] time: 1524.0832, loss: 0.845780
+Epoch: [ 6] [  85/ 160] time: 1525.3713, loss: 1.240657
+Epoch: [ 6] [  86/ 160] time: 1530.2994, loss: 0.949466
+Epoch: [ 6] [  87/ 160] time: 1531.5933, loss: 0.880718
+Epoch: [ 6] [  88/ 160] time: 1532.8838, loss: 1.111321
+Epoch: [ 6] [  89/ 160] time: 1534.1705, loss: 0.778315
+Epoch: [ 6] [  90/ 160] time: 1535.4614, loss: 1.234128
+Epoch: [ 6] [  91/ 160] time: 1540.2476, loss: 0.983015
+Epoch: [ 6] [  92/ 160] time: 1541.5421, loss: 0.963295
+Epoch: [ 6] [  93/ 160] time: 1542.8307, loss: 1.260933
+Epoch: [ 6] [  94/ 160] time: 1544.1190, loss: 0.808718
+Epoch: [ 6] [  95/ 160] time: 1545.4089, loss: 1.327460
+Epoch: [ 6] [  96/ 160] time: 1550.2648, loss: 0.982539
+Epoch: [ 6] [  97/ 160] time: 1551.5474, loss: 1.004081
+Epoch: [ 6] [  98/ 160] time: 1552.8391, loss: 1.191882
+Epoch: [ 6] [  99/ 160] time: 1554.1341, loss: 0.785394
+Epoch: [ 6] [ 100/ 160] time: 1555.4227, loss: 1.385067
+Epoch: [ 6] [ 101/ 160] time: 1560.2942, loss: 1.106396
+Epoch: [ 6] [ 102/ 160] time: 1561.5824, loss: 0.996603
+Epoch: [ 6] [ 103/ 160] time: 1562.8726, loss: 1.397076
+Epoch: [ 6] [ 104/ 160] time: 1564.1646, loss: 0.811323
+Epoch: [ 6] [ 105/ 160] time: 1565.4550, loss: 1.453330
+Epoch: [ 6] [ 106/ 160] time: 1570.3310, loss: 1.139870
+Epoch: [ 6] [ 107/ 160] time: 1571.6159, loss: 1.074457
+Epoch: [ 6] [ 108/ 160] time: 1572.9035, loss: 1.529180
+Epoch: [ 6] [ 109/ 160] time: 1574.1939, loss: 0.879015
+Epoch: [ 6] [ 110/ 160] time: 1575.4873, loss: 1.441724
+Epoch: [ 6] [ 111/ 160] time: 1580.5969, loss: 1.134541
+Epoch: [ 6] [ 112/ 160] time: 1581.8899, loss: 0.963701
+Epoch: [ 6] [ 113/ 160] time: 1583.1798, loss: 1.452237
+Epoch: [ 6] [ 114/ 160] time: 1584.4721, loss: 0.962286
+Epoch: [ 6] [ 115/ 160] time: 1585.7613, loss: 1.284225
+Epoch: [ 6] [ 116/ 160] time: 1590.7828, loss: 0.963903
+Epoch: [ 6] [ 117/ 160] time: 1592.0656, loss: 1.004615
+Epoch: [ 6] [ 118/ 160] time: 1593.3549, loss: 1.196983
+Epoch: [ 6] [ 119/ 160] time: 1594.6398, loss: 0.877394
+Epoch: [ 6] [ 120/ 160] time: 1595.9277, loss: 1.380992
+Epoch: [ 6] [ 121/ 160] time: 1600.9119, loss: 1.006625
+Epoch: [ 6] [ 122/ 160] time: 1602.2084, loss: 0.992757
+Epoch: [ 6] [ 123/ 160] time: 1603.4961, loss: 1.375306
+Epoch: [ 6] [ 124/ 160] time: 1604.7824, loss: 0.874158
+Epoch: [ 6] [ 125/ 160] time: 1606.0760, loss: 1.429280
+Epoch: [ 6] [ 126/ 160] time: 1611.0659, loss: 1.012148
+Epoch: [ 6] [ 127/ 160] time: 1612.3574, loss: 1.115472
+Epoch: [ 6] [ 128/ 160] time: 1613.6446, loss: 1.325634
+Epoch: [ 6] [ 129/ 160] time: 1614.9368, loss: 0.893165
+Epoch: [ 6] [ 130/ 160] time: 1616.2254, loss: 1.507407
+Epoch: [ 6] [ 131/ 160] time: 1621.4329, loss: 1.013810
+Epoch: [ 6] [ 132/ 160] time: 1622.7173, loss: 1.187579
+Epoch: [ 6] [ 133/ 160] time: 1624.0041, loss: 1.363976
+Epoch: [ 6] [ 134/ 160] time: 1625.2934, loss: 0.881516
+Epoch: [ 6] [ 135/ 160] time: 1626.5831, loss: 1.713313
+Epoch: [ 6] [ 136/ 160] time: 1631.8530, loss: 0.929172
+Epoch: [ 6] [ 137/ 160] time: 1633.1409, loss: 1.273103
+Epoch: [ 6] [ 138/ 160] time: 1634.4287, loss: 1.254394
+Epoch: [ 6] [ 139/ 160] time: 1635.7172, loss: 0.906513
+Epoch: [ 6] [ 140/ 160] time: 1637.0026, loss: 1.733269
+Epoch: [ 6] [ 141/ 160] time: 1642.1368, loss: 0.849662
+Epoch: [ 6] [ 142/ 160] time: 1643.4250, loss: 1.272346
+Epoch: [ 6] [ 143/ 160] time: 1644.7085, loss: 1.174394
+Epoch: [ 6] [ 144/ 160] time: 1645.9995, loss: 1.084657
+Epoch: [ 6] [ 145/ 160] time: 1647.2880, loss: 1.487432
+Epoch: [ 6] [ 146/ 160] time: 1652.4506, loss: 0.859090
+Epoch: [ 6] [ 147/ 160] time: 1653.7393, loss: 1.275894
+Epoch: [ 6] [ 148/ 160] time: 1655.0237, loss: 0.958023
+Epoch: [ 6] [ 149/ 160] time: 1656.3144, loss: 1.031802
+Epoch: [ 6] [ 150/ 160] time: 1657.6053, loss: 1.367635
+Epoch: [ 6] [ 151/ 160] time: 1662.7124, loss: 0.857527
+Epoch: [ 6] [ 152/ 160] time: 1663.9947, loss: 1.301775
+Epoch: [ 6] [ 153/ 160] time: 1665.2852, loss: 0.954054
+Epoch: [ 6] [ 154/ 160] time: 1666.5741, loss: 0.915595
+Epoch: [ 6] [ 155/ 160] time: 1667.8639, loss: 1.556515
+Epoch: [ 6] [ 156/ 160] time: 1673.1310, loss: 0.950842
+Epoch: [ 6] [ 157/ 160] time: 1674.4118, loss: 1.234508
+Epoch: [ 6] [ 158/ 160] time: 1675.7068, loss: 1.077824
+Epoch: [ 6] [ 159/ 160] time: 1676.9951, loss: 1.042301
+Epoch: [ 6] [ 160/ 160] time: 1678.2873, loss: 1.521574
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 24.28
+(1, 180, 180, 1)
+img2 PSNR: 35.90
+(1, 180, 180, 1)
+img3 PSNR: 35.74
+(1, 180, 180, 1)
+img4 PSNR: 34.59
+(1, 180, 180, 1)
+img5 PSNR: 34.71
+(1, 180, 180, 1)
+img6 PSNR: 35.32
+(1, 180, 180, 1)
+img7 PSNR: 35.71
+(1, 180, 180, 1)
+img8 PSNR: 35.24
+(1, 180, 180, 1)
+img9 PSNR: 35.08
+(1, 180, 180, 1)
+img10 PSNR: 34.65
+--- Test ---- Average PSNR 34.12 ---
+[*] Saving model...
+Epoch: [ 7] [   1/ 160] time: 1689.3266, loss: 0.873663
+Epoch: [ 7] [   2/ 160] time: 1690.6161, loss: 1.383011
+Epoch: [ 7] [   3/ 160] time: 1691.9095, loss: 1.122041
+Epoch: [ 7] [   4/ 160] time: 1693.2010, loss: 1.252398
+Epoch: [ 7] [   5/ 160] time: 1694.4972, loss: 1.364944
+Epoch: [ 7] [   6/ 160] time: 1699.7445, loss: 0.956732
+Epoch: [ 7] [   7/ 160] time: 1701.0292, loss: 1.271959
+Epoch: [ 7] [   8/ 160] time: 1702.3115, loss: 1.030967
+Epoch: [ 7] [   9/ 160] time: 1703.6026, loss: 0.971169
+Epoch: [ 7] [  10/ 160] time: 1704.8956, loss: 1.385497
+Epoch: [ 7] [  11/ 160] time: 1710.2210, loss: 0.896388
+Epoch: [ 7] [  12/ 160] time: 1711.5045, loss: 1.252703
+Epoch: [ 7] [  13/ 160] time: 1712.7911, loss: 1.109104
+Epoch: [ 7] [  14/ 160] time: 1714.0804, loss: 0.910931
+Epoch: [ 7] [  15/ 160] time: 1715.3756, loss: 1.589596
+Epoch: [ 7] [  16/ 160] time: 1720.7363, loss: 0.814915
+Epoch: [ 7] [  17/ 160] time: 1722.0210, loss: 1.139105
+Epoch: [ 7] [  18/ 160] time: 1723.3109, loss: 1.051641
+Epoch: [ 7] [  19/ 160] time: 1724.6075, loss: 0.932029
+Epoch: [ 7] [  20/ 160] time: 1725.8990, loss: 1.472697
+Epoch: [ 7] [  21/ 160] time: 1731.4685, loss: 0.860759
+Epoch: [ 7] [  22/ 160] time: 1732.7559, loss: 1.192177
+Epoch: [ 7] [  23/ 160] time: 1734.0436, loss: 1.255896
+Epoch: [ 7] [  24/ 160] time: 1735.3311, loss: 0.994868
+Epoch: [ 7] [  25/ 160] time: 1736.6187, loss: 1.475632
+Epoch: [ 7] [  26/ 160] time: 1742.0480, loss: 0.971824
+Epoch: [ 7] [  27/ 160] time: 1743.3461, loss: 1.096104
+Epoch: [ 7] [  28/ 160] time: 1744.6403, loss: 1.395002
+Epoch: [ 7] [  29/ 160] time: 1745.9336, loss: 0.807347
+Epoch: [ 7] [  30/ 160] time: 1747.2214, loss: 1.867975
+Epoch: [ 7] [  31/ 160] time: 1752.6918, loss: 1.050512
+Epoch: [ 7] [  32/ 160] time: 1753.9776, loss: 1.426470
+Epoch: [ 7] [  33/ 160] time: 1755.2639, loss: 1.541186
+Epoch: [ 7] [  34/ 160] time: 1756.5549, loss: 0.826222
+Epoch: [ 7] [  35/ 160] time: 1757.8433, loss: 1.970234
+Epoch: [ 7] [  36/ 160] time: 1763.3104, loss: 1.057948
+Epoch: [ 7] [  37/ 160] time: 1764.5973, loss: 1.922851
+Epoch: [ 7] [  38/ 160] time: 1765.8876, loss: 1.301738
+Epoch: [ 7] [  39/ 160] time: 1767.1792, loss: 1.021977
+Epoch: [ 7] [  40/ 160] time: 1768.4728, loss: 2.027675
+Epoch: [ 7] [  41/ 160] time: 1774.0032, loss: 0.840339
+Epoch: [ 7] [  42/ 160] time: 1775.2881, loss: 2.300161
+Epoch: [ 7] [  43/ 160] time: 1776.5779, loss: 0.869560
+Epoch: [ 7] [  44/ 160] time: 1777.8694, loss: 1.188671
+Epoch: [ 7] [  45/ 160] time: 1779.1591, loss: 1.656250
+Epoch: [ 7] [  46/ 160] time: 1784.6579, loss: 0.881046
+Epoch: [ 7] [  47/ 160] time: 1785.9522, loss: 1.668531
+Epoch: [ 7] [  48/ 160] time: 1787.2426, loss: 0.985826
+Epoch: [ 7] [  49/ 160] time: 1788.5321, loss: 1.330940
+Epoch: [ 7] [  50/ 160] time: 1789.8234, loss: 1.665226
+Epoch: [ 7] [  51/ 160] time: 1795.3247, loss: 0.975450
+Epoch: [ 7] [  52/ 160] time: 1796.6167, loss: 1.365765
+Epoch: [ 7] [  53/ 160] time: 1797.9061, loss: 0.856458
+Epoch: [ 7] [  54/ 160] time: 1799.1988, loss: 1.074534
+Epoch: [ 7] [  55/ 160] time: 1800.4886, loss: 1.487291
+Epoch: [ 7] [  56/ 160] time: 1806.0290, loss: 0.831637
+Epoch: [ 7] [  57/ 160] time: 1807.3212, loss: 1.440895
+Epoch: [ 7] [  58/ 160] time: 1808.6108, loss: 1.268953
+Epoch: [ 7] [  59/ 160] time: 1809.9047, loss: 1.019900
+Epoch: [ 7] [  60/ 160] time: 1811.1978, loss: 2.035765
+Epoch: [ 7] [  61/ 160] time: 1816.6639, loss: 0.923172
+Epoch: [ 7] [  62/ 160] time: 1817.9516, loss: 2.022600
+Epoch: [ 7] [  63/ 160] time: 1819.2385, loss: 1.611776
+Epoch: [ 7] [  64/ 160] time: 1820.5270, loss: 1.199051
+Epoch: [ 7] [  65/ 160] time: 1821.8175, loss: 3.040631
+Epoch: [ 7] [  66/ 160] time: 1827.5353, loss: 0.898261
+Epoch: [ 7] [  67/ 160] time: 1828.8163, loss: 2.734835
+Epoch: [ 7] [  68/ 160] time: 1830.1035, loss: 1.404929
+Epoch: [ 7] [  69/ 160] time: 1831.3948, loss: 1.462026
+Epoch: [ 7] [  70/ 160] time: 1832.6863, loss: 2.587426
+Epoch: [ 7] [  71/ 160] time: 1838.3529, loss: 0.800103
+Epoch: [ 7] [  72/ 160] time: 1839.6381, loss: 2.018234
+Epoch: [ 7] [  73/ 160] time: 1840.9287, loss: 1.379292
+Epoch: [ 7] [  74/ 160] time: 1842.2252, loss: 1.432663
+Epoch: [ 7] [  75/ 160] time: 1843.5115, loss: 1.973252
+Epoch: [ 7] [  76/ 160] time: 1849.3960, loss: 0.879719
+Epoch: [ 7] [  77/ 160] time: 1850.6768, loss: 2.090619
+Epoch: [ 7] [  78/ 160] time: 1851.9680, loss: 1.173401
+Epoch: [ 7] [  79/ 160] time: 1853.2561, loss: 1.561275
+Epoch: [ 7] [  80/ 160] time: 1854.5470, loss: 1.723147
+Epoch: [ 7] [  81/ 160] time: 1860.2011, loss: 0.793020
+Epoch: [ 7] [  82/ 160] time: 1861.5096, loss: 1.841606
+Epoch: [ 7] [  83/ 160] time: 1862.7978, loss: 1.236823
+Epoch: [ 7] [  84/ 160] time: 1864.0935, loss: 1.245040
+Epoch: [ 7] [  85/ 160] time: 1865.3847, loss: 2.545587
+Epoch: [ 7] [  86/ 160] time: 1871.2258, loss: 0.774160
+Epoch: [ 7] [  87/ 160] time: 1872.5211, loss: 1.750602
+Epoch: [ 7] [  88/ 160] time: 1873.8120, loss: 1.720372
+Epoch: [ 7] [  89/ 160] time: 1875.0995, loss: 1.171895
+Epoch: [ 7] [  90/ 160] time: 1876.3872, loss: 2.933959
+Epoch: [ 7] [  91/ 160] time: 1881.9644, loss: 0.857907
+Epoch: [ 7] [  92/ 160] time: 1883.2475, loss: 2.654316
+Epoch: [ 7] [  93/ 160] time: 1884.5361, loss: 1.454932
+Epoch: [ 7] [  94/ 160] time: 1885.8226, loss: 1.126823
+Epoch: [ 7] [  95/ 160] time: 1887.1097, loss: 3.539476
+Epoch: [ 7] [  96/ 160] time: 1892.8241, loss: 0.799252
+Epoch: [ 7] [  97/ 160] time: 1894.1172, loss: 2.629100
+Epoch: [ 7] [  98/ 160] time: 1895.4053, loss: 2.427885
+Epoch: [ 7] [  99/ 160] time: 1896.6970, loss: 2.260473
+Epoch: [ 7] [ 100/ 160] time: 1897.9837, loss: 3.620001
+Epoch: [ 7] [ 101/ 160] time: 1903.6995, loss: 0.993062
+Epoch: [ 7] [ 102/ 160] time: 1904.9840, loss: 2.893709
+Epoch: [ 7] [ 103/ 160] time: 1906.2768, loss: 1.835768
+Epoch: [ 7] [ 104/ 160] time: 1907.5677, loss: 1.636267
+Epoch: [ 7] [ 105/ 160] time: 1908.8584, loss: 4.814108
+Epoch: [ 7] [ 106/ 160] time: 1914.7717, loss: 0.937662
+Epoch: [ 7] [ 107/ 160] time: 1916.0614, loss: 3.931921
+Epoch: [ 7] [ 108/ 160] time: 1917.3521, loss: 2.112903
+Epoch: [ 7] [ 109/ 160] time: 1918.6387, loss: 1.799383
+Epoch: [ 7] [ 110/ 160] time: 1919.9304, loss: 5.082843
+Epoch: [ 7] [ 111/ 160] time: 1925.3392, loss: 0.915793
+Epoch: [ 7] [ 112/ 160] time: 1926.6262, loss: 4.297118
+Epoch: [ 7] [ 113/ 160] time: 1927.9164, loss: 3.843843
+Epoch: [ 7] [ 114/ 160] time: 1929.2069, loss: 3.137774
+Epoch: [ 7] [ 115/ 160] time: 1930.4997, loss: 3.966827
+Epoch: [ 7] [ 116/ 160] time: 1935.8642, loss: 0.864337
+Epoch: [ 7] [ 117/ 160] time: 1937.1542, loss: 2.777556
+Epoch: [ 7] [ 118/ 160] time: 1938.4379, loss: 2.425661
+Epoch: [ 7] [ 119/ 160] time: 1939.7290, loss: 1.676801
+Epoch: [ 7] [ 120/ 160] time: 1941.0183, loss: 3.248426
+Epoch: [ 7] [ 121/ 160] time: 1946.5931, loss: 1.160794
+Epoch: [ 7] [ 122/ 160] time: 1947.8837, loss: 3.670441
+Epoch: [ 7] [ 123/ 160] time: 1949.1713, loss: 2.229793
+Epoch: [ 7] [ 124/ 160] time: 1950.4601, loss: 1.559608
+Epoch: [ 7] [ 125/ 160] time: 1951.7500, loss: 3.441923
+Epoch: [ 7] [ 126/ 160] time: 1957.2813, loss: 0.892513
+Epoch: [ 7] [ 127/ 160] time: 1958.5698, loss: 2.948437
+Epoch: [ 7] [ 128/ 160] time: 1959.8544, loss: 2.562999
+Epoch: [ 7] [ 129/ 160] time: 1961.1445, loss: 1.250451
+Epoch: [ 7] [ 130/ 160] time: 1962.4334, loss: 3.461833
+Epoch: [ 7] [ 131/ 160] time: 1968.2480, loss: 1.714327
+Epoch: [ 7] [ 132/ 160] time: 1969.5341, loss: 3.818800
+Epoch: [ 7] [ 133/ 160] time: 1970.8197, loss: 3.694798
+Epoch: [ 7] [ 134/ 160] time: 1972.1087, loss: 0.883996
+Epoch: [ 7] [ 135/ 160] time: 1973.3990, loss: 8.192896
+Epoch: [ 7] [ 136/ 160] time: 1978.9956, loss: 1.463291
+Epoch: [ 7] [ 137/ 160] time: 1980.2774, loss: 6.196020
+Epoch: [ 7] [ 138/ 160] time: 1981.5682, loss: 4.950168
+Epoch: [ 7] [ 139/ 160] time: 1982.8646, loss: 1.797487
+Epoch: [ 7] [ 140/ 160] time: 1984.1522, loss: 8.800264
+Epoch: [ 7] [ 141/ 160] time: 1989.6357, loss: 1.044765
+Epoch: [ 7] [ 142/ 160] time: 1990.9259, loss: 5.377000
+Epoch: [ 7] [ 143/ 160] time: 1992.2128, loss: 5.072659
+Epoch: [ 7] [ 144/ 160] time: 1993.5050, loss: 2.252410
+Epoch: [ 7] [ 145/ 160] time: 1994.7967, loss: 7.334903
+Epoch: [ 7] [ 146/ 160] time: 2000.5758, loss: 1.691400
+Epoch: [ 7] [ 147/ 160] time: 2001.8617, loss: 4.806946
+Epoch: [ 7] [ 148/ 160] time: 2003.1441, loss: 8.477640
+Epoch: [ 7] [ 149/ 160] time: 2004.4348, loss: 1.546487
+Epoch: [ 7] [ 150/ 160] time: 2005.7256, loss: 7.850543
+Epoch: [ 7] [ 151/ 160] time: 2011.6007, loss: 2.583131
+Epoch: [ 7] [ 152/ 160] time: 2012.8842, loss: 4.154125
+Epoch: [ 7] [ 153/ 160] time: 2014.1738, loss: 7.300145
+Epoch: [ 7] [ 154/ 160] time: 2015.4652, loss: 0.807448
+Epoch: [ 7] [ 155/ 160] time: 2016.7651, loss: 7.769089
+Epoch: [ 7] [ 156/ 160] time: 2022.5098, loss: 2.575632
+Epoch: [ 7] [ 157/ 160] time: 2023.7996, loss: 1.572993
+Epoch: [ 7] [ 158/ 160] time: 2025.0893, loss: 10.389532
+Epoch: [ 7] [ 159/ 160] time: 2026.3796, loss: 1.216132
+Epoch: [ 7] [ 160/ 160] time: 2027.6798, loss: 8.727291
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 6.15
+(1, 180, 180, 1)
+img2 PSNR: 36.33
+(1, 180, 180, 1)
+img3 PSNR: 35.22
+(1, 180, 180, 1)
+img4 PSNR: 23.68
+(1, 180, 180, 1)
+img5 PSNR: 30.26
+(1, 180, 180, 1)
+img6 PSNR: 35.46
+(1, 180, 180, 1)
+img7 PSNR: 36.06
+(1, 180, 180, 1)
+img8 PSNR: 35.10
+(1, 180, 180, 1)
+img9 PSNR: 35.21
+(1, 180, 180, 1)
+img10 PSNR: 33.43
+--- Test ---- Average PSNR 30.69 ---
+[*] Saving model...
+Epoch: [ 8] [   1/ 160] time: 2039.8742, loss: 7.770639
+Epoch: [ 8] [   2/ 160] time: 2041.1653, loss: 1.747425
+Epoch: [ 8] [   3/ 160] time: 2042.4554, loss: 14.080887
+Epoch: [ 8] [   4/ 160] time: 2043.7456, loss: 1.724202
+Epoch: [ 8] [   5/ 160] time: 2045.0389, loss: 8.076303
+Epoch: [ 8] [   6/ 160] time: 2050.9179, loss: 7.199156
+Epoch: [ 8] [   7/ 160] time: 2052.2064, loss: 0.895865
+Epoch: [ 8] [   8/ 160] time: 2053.4984, loss: 11.542789
+Epoch: [ 8] [   9/ 160] time: 2054.7968, loss: 3.882105
+Epoch: [ 8] [  10/ 160] time: 2056.0849, loss: 4.783217
+Epoch: [ 8] [  11/ 160] time: 2061.8641, loss: 11.541573
+Epoch: [ 8] [  12/ 160] time: 2063.1539, loss: 0.724701
+Epoch: [ 8] [  13/ 160] time: 2064.4410, loss: 8.087001
+Epoch: [ 8] [  14/ 160] time: 2065.7339, loss: 6.270977
+Epoch: [ 8] [  15/ 160] time: 2067.0274, loss: 2.708474
+Epoch: [ 8] [  16/ 160] time: 2072.8843, loss: 9.775885
+Epoch: [ 8] [  17/ 160] time: 2074.1730, loss: 2.201190
+Epoch: [ 8] [  18/ 160] time: 2075.4599, loss: 7.356682
+Epoch: [ 8] [  19/ 160] time: 2076.7504, loss: 8.165718
+Epoch: [ 8] [  20/ 160] time: 2078.0406, loss: 1.318730
+Epoch: [ 8] [  21/ 160] time: 2084.1048, loss: 9.799796
+Epoch: [ 8] [  22/ 160] time: 2085.3916, loss: 3.331406
+Epoch: [ 8] [  23/ 160] time: 2086.6764, loss: 3.778147
+Epoch: [ 8] [  24/ 160] time: 2087.9684, loss: 8.361454
+Epoch: [ 8] [  25/ 160] time: 2089.2566, loss: 0.969018
+Epoch: [ 8] [  26/ 160] time: 2095.3544, loss: 6.230383
+Epoch: [ 8] [  27/ 160] time: 2096.6394, loss: 4.531108
+Epoch: [ 8] [  28/ 160] time: 2097.9296, loss: 1.896315
+Epoch: [ 8] [  29/ 160] time: 2099.2209, loss: 5.533241
+Epoch: [ 8] [  30/ 160] time: 2100.5207, loss: 2.087161
+Epoch: [ 8] [  31/ 160] time: 2106.5719, loss: 3.390406
+Epoch: [ 8] [  32/ 160] time: 2107.8612, loss: 4.015296
+Epoch: [ 8] [  33/ 160] time: 2109.1566, loss: 0.729130
+Epoch: [ 8] [  34/ 160] time: 2110.4416, loss: 2.912125
+Epoch: [ 8] [  35/ 160] time: 2111.7317, loss: 3.612518
+Epoch: [ 8] [  36/ 160] time: 2117.5257, loss: 1.349550
+Epoch: [ 8] [  37/ 160] time: 2118.8099, loss: 3.489542
+Epoch: [ 8] [  38/ 160] time: 2120.1031, loss: 1.123223
+Epoch: [ 8] [  39/ 160] time: 2121.3994, loss: 1.418709
+Epoch: [ 8] [  40/ 160] time: 2122.6856, loss: 3.157106
+Epoch: [ 8] [  41/ 160] time: 2128.3554, loss: 0.860792
+Epoch: [ 8] [  42/ 160] time: 2129.6468, loss: 2.289432
+Epoch: [ 8] [  43/ 160] time: 2130.9382, loss: 1.560844
+Epoch: [ 8] [  44/ 160] time: 2132.2282, loss: 0.854913
+Epoch: [ 8] [  45/ 160] time: 2133.5164, loss: 2.406293
+Epoch: [ 8] [  46/ 160] time: 2139.4916, loss: 0.943038
+Epoch: [ 8] [  47/ 160] time: 2140.7808, loss: 1.380877
+Epoch: [ 8] [  48/ 160] time: 2142.0726, loss: 1.163177
+Epoch: [ 8] [  49/ 160] time: 2143.3631, loss: 0.733774
+Epoch: [ 8] [  50/ 160] time: 2144.6517, loss: 1.523497
+Epoch: [ 8] [  51/ 160] time: 2150.3430, loss: 0.812131
+Epoch: [ 8] [  52/ 160] time: 2151.6293, loss: 0.910339
+Epoch: [ 8] [  53/ 160] time: 2152.9216, loss: 0.833854
+Epoch: [ 8] [  54/ 160] time: 2154.2130, loss: 0.738765
+Epoch: [ 8] [  55/ 160] time: 2155.5082, loss: 0.926929
+Epoch: [ 8] [  56/ 160] time: 2161.4554, loss: 0.828911
+Epoch: [ 8] [  57/ 160] time: 2162.7464, loss: 0.788848
+Epoch: [ 8] [  58/ 160] time: 2164.0398, loss: 0.691489
+Epoch: [ 8] [  59/ 160] time: 2165.3282, loss: 0.789926
+Epoch: [ 8] [  60/ 160] time: 2166.6198, loss: 0.906502
+Epoch: [ 8] [  61/ 160] time: 2172.3642, loss: 0.974981
+Epoch: [ 8] [  62/ 160] time: 2173.6567, loss: 0.865518
+Epoch: [ 8] [  63/ 160] time: 2174.9479, loss: 0.832600
+Epoch: [ 8] [  64/ 160] time: 2176.2359, loss: 0.792902
+Epoch: [ 8] [  65/ 160] time: 2177.5283, loss: 0.920086
+Epoch: [ 8] [  66/ 160] time: 2183.5851, loss: 1.030615
+Epoch: [ 8] [  67/ 160] time: 2184.8727, loss: 0.769295
+Epoch: [ 8] [  68/ 160] time: 2186.1624, loss: 0.792307
+Epoch: [ 8] [  69/ 160] time: 2187.4538, loss: 0.790916
+Epoch: [ 8] [  70/ 160] time: 2188.7446, loss: 0.863426
+Epoch: [ 8] [  71/ 160] time: 2194.6762, loss: 1.007083
+Epoch: [ 8] [  72/ 160] time: 2195.9629, loss: 0.755504
+Epoch: [ 8] [  73/ 160] time: 2197.2507, loss: 0.770418
+Epoch: [ 8] [  74/ 160] time: 2198.5447, loss: 0.866603
+Epoch: [ 8] [  75/ 160] time: 2199.8378, loss: 0.871256
+Epoch: [ 8] [  76/ 160] time: 2205.8803, loss: 1.025168
+Epoch: [ 8] [  77/ 160] time: 2207.1695, loss: 0.853463
+Epoch: [ 8] [  78/ 160] time: 2208.4584, loss: 0.889056
+Epoch: [ 8] [  79/ 160] time: 2209.7425, loss: 0.921419
+Epoch: [ 8] [  80/ 160] time: 2211.0328, loss: 1.021809
+Epoch: [ 8] [  81/ 160] time: 2217.3390, loss: 1.230855
+Epoch: [ 8] [  82/ 160] time: 2218.6236, loss: 1.012152
+Epoch: [ 8] [  83/ 160] time: 2219.9117, loss: 0.786992
+Epoch: [ 8] [  84/ 160] time: 2221.2100, loss: 0.999045
+Epoch: [ 8] [  85/ 160] time: 2222.4979, loss: 1.131730
+Epoch: [ 8] [  86/ 160] time: 2228.5883, loss: 1.076534
+Epoch: [ 8] [  87/ 160] time: 2229.8820, loss: 1.049397
+Epoch: [ 8] [  88/ 160] time: 2231.1771, loss: 0.697202
+Epoch: [ 8] [  89/ 160] time: 2232.4625, loss: 1.192909
+Epoch: [ 8] [  90/ 160] time: 2233.7506, loss: 1.222069
+Epoch: [ 8] [  91/ 160] time: 2240.0785, loss: 1.202769
+Epoch: [ 8] [  92/ 160] time: 2241.3637, loss: 1.221278
+Epoch: [ 8] [  93/ 160] time: 2242.6523, loss: 0.749631
+Epoch: [ 8] [  94/ 160] time: 2243.9431, loss: 1.189528
+Epoch: [ 8] [  95/ 160] time: 2245.2332, loss: 0.969708
+Epoch: [ 8] [  96/ 160] time: 2251.6028, loss: 0.990908
+Epoch: [ 8] [  97/ 160] time: 2252.8892, loss: 0.936903
+Epoch: [ 8] [  98/ 160] time: 2254.1749, loss: 0.769850
+Epoch: [ 8] [  99/ 160] time: 2255.4637, loss: 0.832089
+Epoch: [ 8] [ 100/ 160] time: 2256.7541, loss: 1.033867
+Epoch: [ 8] [ 101/ 160] time: 2262.9486, loss: 0.956184
+Epoch: [ 8] [ 102/ 160] time: 2264.2383, loss: 0.968217
+Epoch: [ 8] [ 103/ 160] time: 2265.5276, loss: 0.750933
+Epoch: [ 8] [ 104/ 160] time: 2266.8200, loss: 1.013782
+Epoch: [ 8] [ 105/ 160] time: 2268.1083, loss: 0.954778
+Epoch: [ 8] [ 106/ 160] time: 2274.4293, loss: 1.083268
+Epoch: [ 8] [ 107/ 160] time: 2275.7226, loss: 0.874536
+Epoch: [ 8] [ 108/ 160] time: 2277.0131, loss: 0.725650
+Epoch: [ 8] [ 109/ 160] time: 2278.3054, loss: 0.996549
+Epoch: [ 8] [ 110/ 160] time: 2279.5977, loss: 0.826858
+Epoch: [ 8] [ 111/ 160] time: 2285.8266, loss: 1.097024
+Epoch: [ 8] [ 112/ 160] time: 2287.1238, loss: 0.857243
+Epoch: [ 8] [ 113/ 160] time: 2288.4128, loss: 0.678192
+Epoch: [ 8] [ 114/ 160] time: 2289.7122, loss: 0.951850
+Epoch: [ 8] [ 115/ 160] time: 2291.0048, loss: 0.806879
+Epoch: [ 8] [ 116/ 160] time: 2297.3622, loss: 0.876512
+Epoch: [ 8] [ 117/ 160] time: 2298.6481, loss: 0.994769
+Epoch: [ 8] [ 118/ 160] time: 2299.9461, loss: 0.674548
+Epoch: [ 8] [ 119/ 160] time: 2301.2340, loss: 0.854236
+Epoch: [ 8] [ 120/ 160] time: 2302.5247, loss: 1.015378
+Epoch: [ 8] [ 121/ 160] time: 2308.8232, loss: 0.823684
+Epoch: [ 8] [ 122/ 160] time: 2310.1142, loss: 0.957485
+Epoch: [ 8] [ 123/ 160] time: 2311.4026, loss: 0.750067
+Epoch: [ 8] [ 124/ 160] time: 2312.6932, loss: 0.761478
+Epoch: [ 8] [ 125/ 160] time: 2313.9863, loss: 0.901002
+Epoch: [ 8] [ 126/ 160] time: 2320.3067, loss: 0.796731
+Epoch: [ 8] [ 127/ 160] time: 2321.5929, loss: 0.810401
+Epoch: [ 8] [ 128/ 160] time: 2322.8794, loss: 0.743631
+Epoch: [ 8] [ 129/ 160] time: 2324.1781, loss: 0.742631
+Epoch: [ 8] [ 130/ 160] time: 2325.4656, loss: 0.964280
+Epoch: [ 8] [ 131/ 160] time: 2331.7965, loss: 0.962286
+Epoch: [ 8] [ 132/ 160] time: 2333.0902, loss: 0.779644
+Epoch: [ 8] [ 133/ 160] time: 2334.3843, loss: 0.756102
+Epoch: [ 8] [ 134/ 160] time: 2335.6748, loss: 0.714709
+Epoch: [ 8] [ 135/ 160] time: 2336.9664, loss: 0.969225
+Epoch: [ 8] [ 136/ 160] time: 2343.4180, loss: 0.897542
+Epoch: [ 8] [ 137/ 160] time: 2344.7046, loss: 0.957951
+Epoch: [ 8] [ 138/ 160] time: 2345.9926, loss: 0.779783
+Epoch: [ 8] [ 139/ 160] time: 2347.2843, loss: 0.950910
+Epoch: [ 8] [ 140/ 160] time: 2348.5735, loss: 0.877320
+Epoch: [ 8] [ 141/ 160] time: 2355.0790, loss: 1.047768
+Epoch: [ 8] [ 142/ 160] time: 2356.3642, loss: 0.844998
+Epoch: [ 8] [ 143/ 160] time: 2357.6502, loss: 0.787975
+Epoch: [ 8] [ 144/ 160] time: 2358.9459, loss: 0.814957
+Epoch: [ 8] [ 145/ 160] time: 2360.2326, loss: 0.991854
+Epoch: [ 8] [ 146/ 160] time: 2366.6961, loss: 1.141047
+Epoch: [ 8] [ 147/ 160] time: 2367.9872, loss: 0.904960
+Epoch: [ 8] [ 148/ 160] time: 2369.2781, loss: 0.771977
+Epoch: [ 8] [ 149/ 160] time: 2370.5665, loss: 0.857359
+Epoch: [ 8] [ 150/ 160] time: 2371.8556, loss: 1.089722
+Epoch: [ 8] [ 151/ 160] time: 2378.2100, loss: 0.987421
+Epoch: [ 8] [ 152/ 160] time: 2379.5107, loss: 1.221276
+Epoch: [ 8] [ 153/ 160] time: 2380.7995, loss: 0.828369
+Epoch: [ 8] [ 154/ 160] time: 2382.0900, loss: 0.930576
+Epoch: [ 8] [ 155/ 160] time: 2383.3834, loss: 0.894879
+Epoch: [ 8] [ 156/ 160] time: 2389.4789, loss: 1.086124
+Epoch: [ 8] [ 157/ 160] time: 2390.7650, loss: 0.878742
+Epoch: [ 8] [ 158/ 160] time: 2392.0555, loss: 0.808783
+Epoch: [ 8] [ 159/ 160] time: 2393.3440, loss: 0.854398
+Epoch: [ 8] [ 160/ 160] time: 2394.6346, loss: 0.921538
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 18.01
+(1, 180, 180, 1)
+img2 PSNR: 36.58
+(1, 180, 180, 1)
+img3 PSNR: 36.38
+(1, 180, 180, 1)
+img4 PSNR: 32.16
+(1, 180, 180, 1)
+img5 PSNR: 34.91
+(1, 180, 180, 1)
+img6 PSNR: 35.88
+(1, 180, 180, 1)
+img7 PSNR: 36.41
+(1, 180, 180, 1)
+img8 PSNR: 35.88
+(1, 180, 180, 1)
+img9 PSNR: 35.68
+(1, 180, 180, 1)
+img10 PSNR: 35.20
+--- Test ---- Average PSNR 33.71 ---
+[*] Saving model...
+Epoch: [ 9] [   1/ 160] time: 2407.5344, loss: 0.841236
+Epoch: [ 9] [   2/ 160] time: 2408.8215, loss: 0.792909
+Epoch: [ 9] [   3/ 160] time: 2410.1107, loss: 0.650561
+Epoch: [ 9] [   4/ 160] time: 2411.4091, loss: 0.903833
+Epoch: [ 9] [   5/ 160] time: 2412.6948, loss: 0.831832
+Epoch: [ 9] [   6/ 160] time: 2419.0047, loss: 1.103786
+Epoch: [ 9] [   7/ 160] time: 2420.2890, loss: 0.921912
+Epoch: [ 9] [   8/ 160] time: 2421.5724, loss: 0.848017
+Epoch: [ 9] [   9/ 160] time: 2422.8713, loss: 0.953047
+Epoch: [ 9] [  10/ 160] time: 2424.1569, loss: 0.871477
+Epoch: [ 9] [  11/ 160] time: 2430.5791, loss: 1.110316
+Epoch: [ 9] [  12/ 160] time: 2431.8680, loss: 0.942328
+Epoch: [ 9] [  13/ 160] time: 2433.1618, loss: 1.045167
+Epoch: [ 9] [  14/ 160] time: 2434.4523, loss: 0.912968
+Epoch: [ 9] [  15/ 160] time: 2435.7444, loss: 0.990795
+Epoch: [ 9] [  16/ 160] time: 2442.1254, loss: 1.118971
+Epoch: [ 9] [  17/ 160] time: 2443.4116, loss: 0.808892
+Epoch: [ 9] [  18/ 160] time: 2444.7047, loss: 0.826715
+Epoch: [ 9] [  19/ 160] time: 2446.0014, loss: 0.902230
+Epoch: [ 9] [  20/ 160] time: 2447.2887, loss: 0.875867
+Epoch: [ 9] [  21/ 160] time: 2453.5881, loss: 0.905131
+Epoch: [ 9] [  22/ 160] time: 2454.8781, loss: 0.751445
+Epoch: [ 9] [  23/ 160] time: 2456.1690, loss: 0.835754
+Epoch: [ 9] [  24/ 160] time: 2457.4582, loss: 0.796167
+Epoch: [ 9] [  25/ 160] time: 2458.7517, loss: 0.898546
+Epoch: [ 9] [  26/ 160] time: 2465.2782, loss: 1.109669
+Epoch: [ 9] [  27/ 160] time: 2466.5647, loss: 0.895673
+Epoch: [ 9] [  28/ 160] time: 2467.8540, loss: 1.011433
+Epoch: [ 9] [  29/ 160] time: 2469.1477, loss: 0.882613
+Epoch: [ 9] [  30/ 160] time: 2470.4383, loss: 0.876773
+Epoch: [ 9] [  31/ 160] time: 2477.1320, loss: 1.218291
+Epoch: [ 9] [  32/ 160] time: 2478.4276, loss: 0.844975
+Epoch: [ 9] [  33/ 160] time: 2479.7281, loss: 1.070934
+Epoch: [ 9] [  34/ 160] time: 2481.0184, loss: 0.930380
+Epoch: [ 9] [  35/ 160] time: 2482.3092, loss: 0.949818
+Epoch: [ 9] [  36/ 160] time: 2488.9970, loss: 1.370852
+Epoch: [ 9] [  37/ 160] time: 2490.2911, loss: 0.801804
+Epoch: [ 9] [  38/ 160] time: 2491.5816, loss: 1.297464
+Epoch: [ 9] [  39/ 160] time: 2492.8748, loss: 1.049190
+Epoch: [ 9] [  40/ 160] time: 2494.1662, loss: 1.021619
+Epoch: [ 9] [  41/ 160] time: 2500.9474, loss: 1.633750
+Epoch: [ 9] [  42/ 160] time: 2502.2427, loss: 0.860097
+Epoch: [ 9] [  43/ 160] time: 2503.5388, loss: 1.530911
+Epoch: [ 9] [  44/ 160] time: 2504.8251, loss: 0.936890
+Epoch: [ 9] [  45/ 160] time: 2506.1154, loss: 0.944796
+Epoch: [ 9] [  46/ 160] time: 2512.9372, loss: 1.588902
+Epoch: [ 9] [  47/ 160] time: 2514.2379, loss: 0.854469
+Epoch: [ 9] [  48/ 160] time: 2515.5297, loss: 1.132324
+Epoch: [ 9] [  49/ 160] time: 2516.8238, loss: 0.870508
+Epoch: [ 9] [  50/ 160] time: 2518.1121, loss: 0.924810
+Epoch: [ 9] [  51/ 160] time: 2524.8903, loss: 1.162495
+Epoch: [ 9] [  52/ 160] time: 2526.1829, loss: 0.840221
+Epoch: [ 9] [  53/ 160] time: 2527.4721, loss: 1.039931
+Epoch: [ 9] [  54/ 160] time: 2528.7591, loss: 0.924133
+Epoch: [ 9] [  55/ 160] time: 2530.0431, loss: 0.997397
+Epoch: [ 9] [  56/ 160] time: 2536.7135, loss: 1.275187
+Epoch: [ 9] [  57/ 160] time: 2538.0000, loss: 0.803003
+Epoch: [ 9] [  58/ 160] time: 2539.2899, loss: 1.180640
+Epoch: [ 9] [  59/ 160] time: 2540.5809, loss: 0.744641
+Epoch: [ 9] [  60/ 160] time: 2541.8744, loss: 1.130494
+Epoch: [ 9] [  61/ 160] time: 2548.5696, loss: 1.194744
+Epoch: [ 9] [  62/ 160] time: 2549.8543, loss: 0.937875
+Epoch: [ 9] [  63/ 160] time: 2551.1504, loss: 1.341521
+Epoch: [ 9] [  64/ 160] time: 2552.4415, loss: 0.793695
+Epoch: [ 9] [  65/ 160] time: 2553.7283, loss: 1.120801
+Epoch: [ 9] [  66/ 160] time: 2560.4057, loss: 1.394328
+Epoch: [ 9] [  67/ 160] time: 2561.7004, loss: 0.710949
+Epoch: [ 9] [  68/ 160] time: 2562.9885, loss: 1.268054
+Epoch: [ 9] [  69/ 160] time: 2564.2822, loss: 0.622249
+Epoch: [ 9] [  70/ 160] time: 2565.5706, loss: 0.918269
+Epoch: [ 9] [  71/ 160] time: 2572.3634, loss: 1.000636
+Epoch: [ 9] [  72/ 160] time: 2573.6589, loss: 0.671129
+Epoch: [ 9] [  73/ 160] time: 2574.9487, loss: 1.021660
+Epoch: [ 9] [  74/ 160] time: 2576.2400, loss: 0.668844
+Epoch: [ 9] [  75/ 160] time: 2577.5314, loss: 0.851853
+Epoch: [ 9] [  76/ 160] time: 2584.4142, loss: 1.156240
+Epoch: [ 9] [  77/ 160] time: 2585.7016, loss: 0.622297
+Epoch: [ 9] [  78/ 160] time: 2586.9865, loss: 1.026897
+Epoch: [ 9] [  79/ 160] time: 2588.2755, loss: 0.627496
+Epoch: [ 9] [  80/ 160] time: 2589.5673, loss: 0.768293
+Epoch: [ 9] [  81/ 160] time: 2596.3695, loss: 1.017077
+Epoch: [ 9] [  82/ 160] time: 2597.6580, loss: 0.615156
+Epoch: [ 9] [  83/ 160] time: 2598.9448, loss: 0.879955
+Epoch: [ 9] [  84/ 160] time: 2600.2337, loss: 0.753008
+Epoch: [ 9] [  85/ 160] time: 2601.5234, loss: 0.863096
+Epoch: [ 9] [  86/ 160] time: 2608.2779, loss: 1.246693
+Epoch: [ 9] [  87/ 160] time: 2609.5661, loss: 0.637127
+Epoch: [ 9] [  88/ 160] time: 2610.8587, loss: 1.093217
+Epoch: [ 9] [  89/ 160] time: 2612.1462, loss: 0.759663
+Epoch: [ 9] [  90/ 160] time: 2613.4405, loss: 0.875925
+Epoch: [ 9] [  91/ 160] time: 2620.3267, loss: 1.139869
+Epoch: [ 9] [  92/ 160] time: 2621.6172, loss: 0.631438
+Epoch: [ 9] [  93/ 160] time: 2622.9032, loss: 0.984538
+Epoch: [ 9] [  94/ 160] time: 2624.1986, loss: 0.746119
+Epoch: [ 9] [  95/ 160] time: 2625.4815, loss: 0.844828
+Epoch: [ 9] [  96/ 160] time: 2632.5882, loss: 1.226464
+Epoch: [ 9] [  97/ 160] time: 2633.8735, loss: 0.666746
+Epoch: [ 9] [  98/ 160] time: 2635.1643, loss: 1.023676
+Epoch: [ 9] [  99/ 160] time: 2636.4533, loss: 0.671643
+Epoch: [ 9] [ 100/ 160] time: 2637.7419, loss: 0.757868
+Epoch: [ 9] [ 101/ 160] time: 2644.6870, loss: 1.137589
+Epoch: [ 9] [ 102/ 160] time: 2645.9767, loss: 0.651116
+Epoch: [ 9] [ 103/ 160] time: 2647.2602, loss: 0.959677
+Epoch: [ 9] [ 104/ 160] time: 2648.5527, loss: 0.762349
+Epoch: [ 9] [ 105/ 160] time: 2649.8431, loss: 0.750440
+Epoch: [ 9] [ 106/ 160] time: 2656.9622, loss: 1.232142
+Epoch: [ 9] [ 107/ 160] time: 2658.2457, loss: 0.644471
+Epoch: [ 9] [ 108/ 160] time: 2659.5395, loss: 1.252590
+Epoch: [ 9] [ 109/ 160] time: 2660.8296, loss: 0.801723
+Epoch: [ 9] [ 110/ 160] time: 2662.1216, loss: 0.871886
+Epoch: [ 9] [ 111/ 160] time: 2669.1964, loss: 1.645298
+Epoch: [ 9] [ 112/ 160] time: 2670.4859, loss: 0.697798
+Epoch: [ 9] [ 113/ 160] time: 2671.7771, loss: 1.341778
+Epoch: [ 9] [ 114/ 160] time: 2673.0685, loss: 0.716364
+Epoch: [ 9] [ 115/ 160] time: 2674.3662, loss: 0.877526
+Epoch: [ 9] [ 116/ 160] time: 2681.6241, loss: 1.140445
+Epoch: [ 9] [ 117/ 160] time: 2682.9159, loss: 0.648298
+Epoch: [ 9] [ 118/ 160] time: 2684.2074, loss: 1.121014
+Epoch: [ 9] [ 119/ 160] time: 2685.5074, loss: 0.679957
+Epoch: [ 9] [ 120/ 160] time: 2686.7985, loss: 0.895224
+Epoch: [ 9] [ 121/ 160] time: 2693.9081, loss: 1.110538
+Epoch: [ 9] [ 122/ 160] time: 2695.2021, loss: 0.600312
+Epoch: [ 9] [ 123/ 160] time: 2696.4915, loss: 0.979190
+Epoch: [ 9] [ 124/ 160] time: 2697.7855, loss: 0.748462
+Epoch: [ 9] [ 125/ 160] time: 2699.0758, loss: 1.045949
+Epoch: [ 9] [ 126/ 160] time: 2706.1070, loss: 1.095443
+Epoch: [ 9] [ 127/ 160] time: 2707.3922, loss: 0.674387
+Epoch: [ 9] [ 128/ 160] time: 2708.6723, loss: 1.190069
+Epoch: [ 9] [ 129/ 160] time: 2709.9695, loss: 0.632033
+Epoch: [ 9] [ 130/ 160] time: 2711.2607, loss: 1.056923
+Epoch: [ 9] [ 131/ 160] time: 2718.1979, loss: 1.052711
+Epoch: [ 9] [ 132/ 160] time: 2719.4819, loss: 0.696475
+Epoch: [ 9] [ 133/ 160] time: 2720.7764, loss: 1.270916
+Epoch: [ 9] [ 134/ 160] time: 2722.0631, loss: 0.647694
+Epoch: [ 9] [ 135/ 160] time: 2723.3511, loss: 0.945623
+Epoch: [ 9] [ 136/ 160] time: 2730.5418, loss: 1.234303
+Epoch: [ 9] [ 137/ 160] time: 2731.8284, loss: 0.645977
+Epoch: [ 9] [ 138/ 160] time: 2733.1188, loss: 1.090912
+Epoch: [ 9] [ 139/ 160] time: 2734.4032, loss: 0.598898
+Epoch: [ 9] [ 140/ 160] time: 2735.6943, loss: 1.034429
+Epoch: [ 9] [ 141/ 160] time: 2742.8525, loss: 0.972370
+Epoch: [ 9] [ 142/ 160] time: 2744.1455, loss: 0.628399
+Epoch: [ 9] [ 143/ 160] time: 2745.4335, loss: 1.102516
+Epoch: [ 9] [ 144/ 160] time: 2746.7241, loss: 0.618260
+Epoch: [ 9] [ 145/ 160] time: 2748.0127, loss: 0.916860
+Epoch: [ 9] [ 146/ 160] time: 2755.0123, loss: 1.199924
+Epoch: [ 9] [ 147/ 160] time: 2756.2978, loss: 0.617176
+Epoch: [ 9] [ 148/ 160] time: 2757.5855, loss: 1.083244
+Epoch: [ 9] [ 149/ 160] time: 2758.8745, loss: 0.708048
+Epoch: [ 9] [ 150/ 160] time: 2760.1696, loss: 0.886915
+Epoch: [ 9] [ 151/ 160] time: 2767.1632, loss: 1.321522
+Epoch: [ 9] [ 152/ 160] time: 2768.4518, loss: 0.626121
+Epoch: [ 9] [ 153/ 160] time: 2769.7438, loss: 1.176181
+Epoch: [ 9] [ 154/ 160] time: 2771.0310, loss: 0.653376
+Epoch: [ 9] [ 155/ 160] time: 2772.3205, loss: 0.837068
+Epoch: [ 9] [ 156/ 160] time: 2779.5809, loss: 1.138573
+Epoch: [ 9] [ 157/ 160] time: 2780.8657, loss: 0.551045
+Epoch: [ 9] [ 158/ 160] time: 2782.1471, loss: 0.936875
+Epoch: [ 9] [ 159/ 160] time: 2783.4385, loss: 0.684566
+Epoch: [ 9] [ 160/ 160] time: 2784.7258, loss: 0.741094
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 16.27
+(1, 180, 180, 1)
+img2 PSNR: 36.94
+(1, 180, 180, 1)
+img3 PSNR: 36.66
+(1, 180, 180, 1)
+img4 PSNR: 31.12
+(1, 180, 180, 1)
+img5 PSNR: 35.17
+(1, 180, 180, 1)
+img6 PSNR: 36.18
+(1, 180, 180, 1)
+img7 PSNR: 36.72
+(1, 180, 180, 1)
+img8 PSNR: 36.12
+(1, 180, 180, 1)
+img9 PSNR: 35.98
+(1, 180, 180, 1)
+img10 PSNR: 35.57
+--- Test ---- Average PSNR 33.67 ---
+[*] Saving model...
+Epoch: [10] [   1/ 160] time: 2800.7637, loss: 1.334653
+Epoch: [10] [   2/ 160] time: 2802.0481, loss: 0.570107
+Epoch: [10] [   3/ 160] time: 2803.3358, loss: 0.889186
+Epoch: [10] [   4/ 160] time: 2804.6274, loss: 0.816003
+Epoch: [10] [   5/ 160] time: 2805.9234, loss: 0.857272
+Epoch: [10] [   6/ 160] time: 2813.1402, loss: 1.340632
+Epoch: [10] [   7/ 160] time: 2814.4321, loss: 0.645463
+Epoch: [10] [   8/ 160] time: 2815.7185, loss: 1.026998
+Epoch: [10] [   9/ 160] time: 2817.0048, loss: 0.882485
+Epoch: [10] [  10/ 160] time: 2818.2948, loss: 0.964409
+Epoch: [10] [  11/ 160] time: 2825.7379, loss: 1.436714
+Epoch: [10] [  12/ 160] time: 2827.0306, loss: 0.604891
+Epoch: [10] [  13/ 160] time: 2828.3210, loss: 1.293493
+Epoch: [10] [  14/ 160] time: 2829.6128, loss: 0.748936
+Epoch: [10] [  15/ 160] time: 2830.8997, loss: 0.787069
+Epoch: [10] [  16/ 160] time: 2838.1140, loss: 1.327498
+Epoch: [10] [  17/ 160] time: 2839.4004, loss: 0.546454
+Epoch: [10] [  18/ 160] time: 2840.6922, loss: 1.085853
+Epoch: [10] [  19/ 160] time: 2841.9805, loss: 0.728267
+Epoch: [10] [  20/ 160] time: 2843.2678, loss: 0.775084
+Epoch: [10] [  21/ 160] time: 2850.5355, loss: 1.392605
+Epoch: [10] [  22/ 160] time: 2851.8262, loss: 0.708929
+Epoch: [10] [  23/ 160] time: 2853.1135, loss: 1.304966
+Epoch: [10] [  24/ 160] time: 2854.4030, loss: 0.801405
+Epoch: [10] [  25/ 160] time: 2855.6941, loss: 0.785641
+Epoch: [10] [  26/ 160] time: 2863.0439, loss: 1.613857
+Epoch: [10] [  27/ 160] time: 2864.3311, loss: 0.632478
+Epoch: [10] [  28/ 160] time: 2865.6174, loss: 1.296664
+Epoch: [10] [  29/ 160] time: 2866.9059, loss: 0.840539
+Epoch: [10] [  30/ 160] time: 2868.1964, loss: 0.867307
+Epoch: [10] [  31/ 160] time: 2875.5688, loss: 1.504740
+Epoch: [10] [  32/ 160] time: 2876.8529, loss: 0.560112
+Epoch: [10] [  33/ 160] time: 2878.1383, loss: 1.207466
+Epoch: [10] [  34/ 160] time: 2879.4287, loss: 0.950904
+Epoch: [10] [  35/ 160] time: 2880.7194, loss: 0.978010
+Epoch: [10] [  36/ 160] time: 2888.1109, loss: 1.480250
+Epoch: [10] [  37/ 160] time: 2889.4035, loss: 0.600597
+Epoch: [10] [  38/ 160] time: 2890.6903, loss: 1.577205
+Epoch: [10] [  39/ 160] time: 2891.9813, loss: 0.744006
+Epoch: [10] [  40/ 160] time: 2893.2678, loss: 1.225627
+Epoch: [10] [  41/ 160] time: 2900.5779, loss: 1.371946
+Epoch: [10] [  42/ 160] time: 2901.8708, loss: 0.748155
+Epoch: [10] [  43/ 160] time: 2903.1591, loss: 1.338122
+Epoch: [10] [  44/ 160] time: 2904.4425, loss: 0.589949
+Epoch: [10] [  45/ 160] time: 2905.7289, loss: 0.997401
+Epoch: [10] [  46/ 160] time: 2913.2475, loss: 1.133956
+Epoch: [10] [  47/ 160] time: 2914.5360, loss: 0.692799
+Epoch: [10] [  48/ 160] time: 2915.8217, loss: 1.541039
+Epoch: [10] [  49/ 160] time: 2917.1141, loss: 0.597449
+Epoch: [10] [  50/ 160] time: 2918.3997, loss: 1.066000
+Epoch: [10] [  51/ 160] time: 2925.9057, loss: 0.992937
+Epoch: [10] [  52/ 160] time: 2927.1929, loss: 0.677859
+Epoch: [10] [  53/ 160] time: 2928.4829, loss: 1.203320
+Epoch: [10] [  54/ 160] time: 2929.7700, loss: 0.601754
+Epoch: [10] [  55/ 160] time: 2931.0586, loss: 0.997226
+Epoch: [10] [  56/ 160] time: 2938.9455, loss: 1.103505
+Epoch: [10] [  57/ 160] time: 2940.2386, loss: 0.705032
+Epoch: [10] [  58/ 160] time: 2941.5282, loss: 1.257150
+Epoch: [10] [  59/ 160] time: 2942.8218, loss: 0.628261
+Epoch: [10] [  60/ 160] time: 2944.1213, loss: 0.940201
+Epoch: [10] [  61/ 160] time: 2951.6754, loss: 1.272527
+Epoch: [10] [  62/ 160] time: 2952.9707, loss: 0.767368
+Epoch: [10] [  63/ 160] time: 2954.2591, loss: 1.394540
+Epoch: [10] [  64/ 160] time: 2955.5510, loss: 0.609548
+Epoch: [10] [  65/ 160] time: 2956.8489, loss: 1.021732
+Epoch: [10] [  66/ 160] time: 2964.3916, loss: 1.143555
+Epoch: [10] [  67/ 160] time: 2965.6824, loss: 0.616352
+Epoch: [10] [  68/ 160] time: 2966.9727, loss: 1.611814
+Epoch: [10] [  69/ 160] time: 2968.2667, loss: 0.637520
+Epoch: [10] [  70/ 160] time: 2969.5545, loss: 1.038216
+Epoch: [10] [  71/ 160] time: 2977.0455, loss: 1.203119
+Epoch: [10] [  72/ 160] time: 2978.3310, loss: 0.603075
+Epoch: [10] [  73/ 160] time: 2979.6200, loss: 1.365117
+Epoch: [10] [  74/ 160] time: 2980.9122, loss: 0.666375
+Epoch: [10] [  75/ 160] time: 2982.2035, loss: 0.812662
+Epoch: [10] [  76/ 160] time: 2990.0226, loss: 1.337313
+Epoch: [10] [  77/ 160] time: 2991.3209, loss: 0.585803
+Epoch: [10] [  78/ 160] time: 2992.6155, loss: 1.376517
+Epoch: [10] [  79/ 160] time: 2993.9079, loss: 0.938220
+Epoch: [10] [  80/ 160] time: 2995.2026, loss: 0.854845
+Epoch: [10] [  81/ 160] time: 3002.8992, loss: 2.002773
+Epoch: [10] [  82/ 160] time: 3004.1934, loss: 0.634181
+Epoch: [10] [  83/ 160] time: 3005.4813, loss: 2.209001
+Epoch: [10] [  84/ 160] time: 3006.7790, loss: 0.799212
+Epoch: [10] [  85/ 160] time: 3008.0708, loss: 1.335046
+Epoch: [10] [  86/ 160] time: 3015.7405, loss: 1.469065
+Epoch: [10] [  87/ 160] time: 3017.0279, loss: 0.744823
+Epoch: [10] [  88/ 160] time: 3018.3161, loss: 1.639103
+Epoch: [10] [  89/ 160] time: 3019.6071, loss: 0.673337
+Epoch: [10] [  90/ 160] time: 3020.8988, loss: 1.177383
+Epoch: [10] [  91/ 160] time: 3028.6877, loss: 1.317813
+Epoch: [10] [  92/ 160] time: 3029.9748, loss: 0.672055
+Epoch: [10] [  93/ 160] time: 3031.2668, loss: 1.528101
+Epoch: [10] [  94/ 160] time: 3032.5572, loss: 0.668988
+Epoch: [10] [  95/ 160] time: 3033.8494, loss: 0.883017
+Epoch: [10] [  96/ 160] time: 3041.6660, loss: 1.582110
+Epoch: [10] [  97/ 160] time: 3042.9539, loss: 0.636725
+Epoch: [10] [  98/ 160] time: 3044.2400, loss: 1.489527
+Epoch: [10] [  99/ 160] time: 3045.5288, loss: 0.678180
+Epoch: [10] [ 100/ 160] time: 3046.8175, loss: 0.988024
+Epoch: [10] [ 101/ 160] time: 3054.7382, loss: 1.230214
+Epoch: [10] [ 102/ 160] time: 3056.0240, loss: 0.619892
+Epoch: [10] [ 103/ 160] time: 3057.3105, loss: 1.210191
+Epoch: [10] [ 104/ 160] time: 3058.6068, loss: 0.759632
+Epoch: [10] [ 105/ 160] time: 3059.8958, loss: 0.728608
+Epoch: [10] [ 106/ 160] time: 3067.6335, loss: 1.626104
+Epoch: [10] [ 107/ 160] time: 3068.9236, loss: 0.668860
+Epoch: [10] [ 108/ 160] time: 3070.2113, loss: 1.318484
+Epoch: [10] [ 109/ 160] time: 3071.5048, loss: 0.958830
+Epoch: [10] [ 110/ 160] time: 3072.7896, loss: 0.729989
+Epoch: [10] [ 111/ 160] time: 3080.6177, loss: 1.723011
+Epoch: [10] [ 112/ 160] time: 3081.9104, loss: 0.843457
+Epoch: [10] [ 113/ 160] time: 3083.2058, loss: 1.366243
+Epoch: [10] [ 114/ 160] time: 3084.4972, loss: 1.626671
+Epoch: [10] [ 115/ 160] time: 3085.7899, loss: 0.757736
+Epoch: [10] [ 116/ 160] time: 3093.7709, loss: 2.684339
+Epoch: [10] [ 117/ 160] time: 3095.0538, loss: 0.877319
+Epoch: [10] [ 118/ 160] time: 3096.3436, loss: 2.285941
+Epoch: [10] [ 119/ 160] time: 3097.6417, loss: 1.682862
+Epoch: [10] [ 120/ 160] time: 3098.9267, loss: 0.871440
+Epoch: [10] [ 121/ 160] time: 3106.8459, loss: 3.133291
+Epoch: [10] [ 122/ 160] time: 3108.1329, loss: 0.800512
+Epoch: [10] [ 123/ 160] time: 3109.4238, loss: 2.797752
+Epoch: [10] [ 124/ 160] time: 3110.7159, loss: 1.464849
+Epoch: [10] [ 125/ 160] time: 3112.0053, loss: 0.912230
+Epoch: [10] [ 126/ 160] time: 3119.9915, loss: 2.763896
+Epoch: [10] [ 127/ 160] time: 3121.2787, loss: 0.665072
+Epoch: [10] [ 128/ 160] time: 3122.5645, loss: 1.978094
+Epoch: [10] [ 129/ 160] time: 3123.8548, loss: 1.734362
+Epoch: [10] [ 130/ 160] time: 3125.1461, loss: 1.013489
+Epoch: [10] [ 131/ 160] time: 3132.9667, loss: 2.566563
+Epoch: [10] [ 132/ 160] time: 3134.2576, loss: 0.756537
+Epoch: [10] [ 133/ 160] time: 3135.5458, loss: 1.891742
+Epoch: [10] [ 134/ 160] time: 3136.8345, loss: 1.943521
+Epoch: [10] [ 135/ 160] time: 3138.1223, loss: 0.841863
+Epoch: [10] [ 136/ 160] time: 3145.9296, loss: 3.685234
+Epoch: [10] [ 137/ 160] time: 3147.2198, loss: 0.616590
+Epoch: [10] [ 138/ 160] time: 3148.5098, loss: 2.483739
+Epoch: [10] [ 139/ 160] time: 3149.8042, loss: 1.404953
+Epoch: [10] [ 140/ 160] time: 3151.0947, loss: 1.005564
+Epoch: [10] [ 141/ 160] time: 3159.2401, loss: 2.481904
+Epoch: [10] [ 142/ 160] time: 3160.5407, loss: 0.848741
+Epoch: [10] [ 143/ 160] time: 3161.8385, loss: 2.164875
+Epoch: [10] [ 144/ 160] time: 3163.1258, loss: 1.238851
+Epoch: [10] [ 145/ 160] time: 3164.4174, loss: 0.884030
+Epoch: [10] [ 146/ 160] time: 3172.5085, loss: 2.202476
+Epoch: [10] [ 147/ 160] time: 3173.7985, loss: 0.750161
+Epoch: [10] [ 148/ 160] time: 3175.0937, loss: 1.570700
+Epoch: [10] [ 149/ 160] time: 3176.3867, loss: 1.546190
+Epoch: [10] [ 150/ 160] time: 3177.6777, loss: 0.792402
+Epoch: [10] [ 151/ 160] time: 3185.8759, loss: 2.925990
+Epoch: [10] [ 152/ 160] time: 3187.1656, loss: 0.865742
+Epoch: [10] [ 153/ 160] time: 3188.4534, loss: 1.701146
+Epoch: [10] [ 154/ 160] time: 3189.7476, loss: 2.422898
+Epoch: [10] [ 155/ 160] time: 3191.0471, loss: 0.850734
+Epoch: [10] [ 156/ 160] time: 3199.0771, loss: 4.497317
+Epoch: [10] [ 157/ 160] time: 3200.3618, loss: 0.888381
+Epoch: [10] [ 158/ 160] time: 3201.6569, loss: 3.586545
+Epoch: [10] [ 159/ 160] time: 3202.9498, loss: 2.090983
+Epoch: [10] [ 160/ 160] time: 3204.2375, loss: 1.291377
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 12.93
+(1, 180, 180, 1)
+img2 PSNR: 37.05
+(1, 180, 180, 1)
+img3 PSNR: 36.82
+(1, 180, 180, 1)
+img4 PSNR: 26.07
+(1, 180, 180, 1)
+img5 PSNR: 35.71
+(1, 180, 180, 1)
+img6 PSNR: 36.34
+(1, 180, 180, 1)
+img7 PSNR: 36.84
+(1, 180, 180, 1)
+img8 PSNR: 36.32
+(1, 180, 180, 1)
+img9 PSNR: 36.18
+(1, 180, 180, 1)
+img10 PSNR: 35.92
+--- Test ---- Average PSNR 33.02 ---
+[*] Saving model...
+Epoch: [11] [   1/ 160] time: 3221.7283, loss: 3.709013
+Epoch: [11] [   2/ 160] time: 3223.0292, loss: 0.691886
+Epoch: [11] [   3/ 160] time: 3224.3183, loss: 3.446322
+Epoch: [11] [   4/ 160] time: 3225.6104, loss: 1.056825
+Epoch: [11] [   5/ 160] time: 3226.9011, loss: 0.985880
+Epoch: [11] [   6/ 160] time: 3235.0442, loss: 2.545312
+Epoch: [11] [   7/ 160] time: 3236.3361, loss: 0.762443
+Epoch: [11] [   8/ 160] time: 3237.6250, loss: 1.622139
+Epoch: [11] [   9/ 160] time: 3238.9177, loss: 0.985748
+Epoch: [11] [  10/ 160] time: 3240.2088, loss: 0.804347
+Epoch: [11] [  11/ 160] time: 3248.2077, loss: 1.727284
+Epoch: [11] [  12/ 160] time: 3249.4949, loss: 0.729267
+Epoch: [11] [  13/ 160] time: 3250.7950, loss: 1.107674
+Epoch: [11] [  14/ 160] time: 3252.0814, loss: 0.770979
+Epoch: [11] [  15/ 160] time: 3253.3697, loss: 0.714542
+Epoch: [11] [  16/ 160] time: 3261.6374, loss: 1.193310
+Epoch: [11] [  17/ 160] time: 3262.9218, loss: 1.108847
+Epoch: [11] [  18/ 160] time: 3264.2099, loss: 0.860291
+Epoch: [11] [  19/ 160] time: 3265.5006, loss: 1.743444
+Epoch: [11] [  20/ 160] time: 3266.7948, loss: 0.780756
+Epoch: [11] [  21/ 160] time: 3275.0898, loss: 1.965368
+Epoch: [11] [  22/ 160] time: 3276.3826, loss: 1.139941
+Epoch: [11] [  23/ 160] time: 3277.6689, loss: 0.644301
+Epoch: [11] [  24/ 160] time: 3278.9624, loss: 1.890033
+Epoch: [11] [  25/ 160] time: 3280.2540, loss: 1.299299
+Epoch: [11] [  26/ 160] time: 3288.5727, loss: 1.973282
+Epoch: [11] [  27/ 160] time: 3289.8658, loss: 1.759143
+Epoch: [11] [  28/ 160] time: 3291.1587, loss: 0.691900
+Epoch: [11] [  29/ 160] time: 3292.4486, loss: 1.668123
+Epoch: [11] [  30/ 160] time: 3293.7420, loss: 1.739646
+Epoch: [11] [  31/ 160] time: 3301.2481, loss: 1.518024
+Epoch: [11] [  32/ 160] time: 3302.5372, loss: 1.863797
+Epoch: [11] [  33/ 160] time: 3303.8275, loss: 0.756977
+Epoch: [11] [  34/ 160] time: 3305.1186, loss: 2.024213
+Epoch: [11] [  35/ 160] time: 3306.4138, loss: 2.644263
+Epoch: [11] [  36/ 160] time: 3313.9607, loss: 1.611034
+Epoch: [11] [  37/ 160] time: 3315.2472, loss: 2.814213
+Epoch: [11] [  38/ 160] time: 3316.5494, loss: 0.683999
+Epoch: [11] [  39/ 160] time: 3317.8449, loss: 1.466347
+Epoch: [11] [  40/ 160] time: 3319.1370, loss: 2.141772
+Epoch: [11] [  41/ 160] time: 3326.7775, loss: 1.036809
+Epoch: [11] [  42/ 160] time: 3328.0730, loss: 2.957456
+Epoch: [11] [  43/ 160] time: 3329.3704, loss: 0.708707
+Epoch: [11] [  44/ 160] time: 3330.6633, loss: 1.824548
+Epoch: [11] [  45/ 160] time: 3331.9631, loss: 1.887423
+Epoch: [11] [  46/ 160] time: 3339.6008, loss: 1.172673
+Epoch: [11] [  47/ 160] time: 3340.8982, loss: 1.975336
+Epoch: [11] [  48/ 160] time: 3342.1899, loss: 1.051246
+Epoch: [11] [  49/ 160] time: 3343.4771, loss: 2.025230
+Epoch: [11] [  50/ 160] time: 3344.7755, loss: 2.498932
+Epoch: [11] [  51/ 160] time: 3352.4423, loss: 1.166048
+Epoch: [11] [  52/ 160] time: 3353.7336, loss: 2.194702
+Epoch: [11] [  53/ 160] time: 3355.0235, loss: 1.109532
+Epoch: [11] [  54/ 160] time: 3356.3091, loss: 1.261896
+Epoch: [11] [  55/ 160] time: 3357.5975, loss: 4.066670
+Epoch: [11] [  56/ 160] time: 3365.4314, loss: 1.119382
+Epoch: [11] [  57/ 160] time: 3366.7249, loss: 3.612864
+Epoch: [11] [  58/ 160] time: 3368.0165, loss: 0.978255
+Epoch: [11] [  59/ 160] time: 3369.3055, loss: 2.132923
+Epoch: [11] [  60/ 160] time: 3370.5932, loss: 3.074000
+Epoch: [11] [  61/ 160] time: 3378.3274, loss: 1.113132
+Epoch: [11] [  62/ 160] time: 3379.6171, loss: 4.215589
+Epoch: [11] [  63/ 160] time: 3380.9060, loss: 0.933467
+Epoch: [11] [  64/ 160] time: 3382.1954, loss: 2.459114
+Epoch: [11] [  65/ 160] time: 3383.4876, loss: 3.639644
+Epoch: [11] [  66/ 160] time: 3391.3838, loss: 0.945865
+Epoch: [11] [  67/ 160] time: 3392.6758, loss: 5.881923
+Epoch: [11] [  68/ 160] time: 3393.9641, loss: 1.222641
+Epoch: [11] [  69/ 160] time: 3395.2508, loss: 2.861355
+Epoch: [11] [  70/ 160] time: 3396.5429, loss: 4.606716
+Epoch: [11] [  71/ 160] time: 3404.4686, loss: 1.030740
+Epoch: [11] [  72/ 160] time: 3405.7575, loss: 4.966846
+Epoch: [11] [  73/ 160] time: 3407.0406, loss: 1.565723
+Epoch: [11] [  74/ 160] time: 3408.3297, loss: 2.351210
+Epoch: [11] [  75/ 160] time: 3409.6215, loss: 5.129313
+Epoch: [11] [  76/ 160] time: 3417.5031, loss: 0.905791
+Epoch: [11] [  77/ 160] time: 3418.7931, loss: 4.151012
+Epoch: [11] [  78/ 160] time: 3420.0828, loss: 2.693523
+Epoch: [11] [  79/ 160] time: 3421.3683, loss: 1.884368
+Epoch: [11] [  80/ 160] time: 3422.6575, loss: 6.018294
+Epoch: [11] [  81/ 160] time: 3430.4921, loss: 0.921702
+Epoch: [11] [  82/ 160] time: 3431.7797, loss: 3.834530
+Epoch: [11] [  83/ 160] time: 3433.0715, loss: 4.111030
+Epoch: [11] [  84/ 160] time: 3434.3608, loss: 1.187032
+Epoch: [11] [  85/ 160] time: 3435.6534, loss: 6.882575
+Epoch: [11] [  86/ 160] time: 3443.9703, loss: 1.644043
+Epoch: [11] [  87/ 160] time: 3445.2655, loss: 3.322674
+Epoch: [11] [  88/ 160] time: 3446.5603, loss: 7.218873
+Epoch: [11] [  89/ 160] time: 3447.8484, loss: 0.750380
+Epoch: [11] [  90/ 160] time: 3449.1430, loss: 9.790285
+Epoch: [11] [  91/ 160] time: 3457.2754, loss: 3.386890
+Epoch: [11] [  92/ 160] time: 3458.5631, loss: 4.830139
+Epoch: [11] [  93/ 160] time: 3459.8544, loss: 7.089506
+Epoch: [11] [  94/ 160] time: 3461.1440, loss: 0.942714
+Epoch: [11] [  95/ 160] time: 3462.4389, loss: 9.871015
+Epoch: [11] [  96/ 160] time: 3470.6084, loss: 2.197444
+Epoch: [11] [  97/ 160] time: 3471.9003, loss: 2.002749
+Epoch: [11] [  98/ 160] time: 3473.1907, loss: 6.135184
+Epoch: [11] [  99/ 160] time: 3474.4839, loss: 1.068276
+Epoch: [11] [ 100/ 160] time: 3475.7784, loss: 5.434845
+Epoch: [11] [ 101/ 160] time: 3484.0720, loss: 2.374937
+Epoch: [11] [ 102/ 160] time: 3485.3708, loss: 1.138019
+Epoch: [11] [ 103/ 160] time: 3486.6579, loss: 6.030492
+Epoch: [11] [ 104/ 160] time: 3487.9565, loss: 1.360845
+Epoch: [11] [ 105/ 160] time: 3489.2509, loss: 4.192611
+Epoch: [11] [ 106/ 160] time: 3497.5582, loss: 3.290855
+Epoch: [11] [ 107/ 160] time: 3498.8526, loss: 1.006539
+Epoch: [11] [ 108/ 160] time: 3500.1480, loss: 5.101345
+Epoch: [11] [ 109/ 160] time: 3501.4426, loss: 1.426571
+Epoch: [11] [ 110/ 160] time: 3502.7308, loss: 2.800568
+Epoch: [11] [ 111/ 160] time: 3510.8623, loss: 2.718982
+Epoch: [11] [ 112/ 160] time: 3512.1595, loss: 0.911035
+Epoch: [11] [ 113/ 160] time: 3513.4525, loss: 3.748155
+Epoch: [11] [ 114/ 160] time: 3514.7386, loss: 1.906911
+Epoch: [11] [ 115/ 160] time: 3516.0303, loss: 1.859989
+Epoch: [11] [ 116/ 160] time: 3524.2272, loss: 2.178872
+Epoch: [11] [ 117/ 160] time: 3525.5219, loss: 0.909778
+Epoch: [11] [ 118/ 160] time: 3526.8110, loss: 1.780163
+Epoch: [11] [ 119/ 160] time: 3528.0998, loss: 1.999643
+Epoch: [11] [ 120/ 160] time: 3529.3933, loss: 0.949845
+Epoch: [11] [ 121/ 160] time: 3537.6163, loss: 1.677156
+Epoch: [11] [ 122/ 160] time: 3538.9014, loss: 2.039204
+Epoch: [11] [ 123/ 160] time: 3540.1978, loss: 1.212409
+Epoch: [11] [ 124/ 160] time: 3541.4865, loss: 2.601556
+Epoch: [11] [ 125/ 160] time: 3542.7798, loss: 0.897576
+Epoch: [11] [ 126/ 160] time: 3551.0748, loss: 1.390524
+Epoch: [11] [ 127/ 160] time: 3552.3740, loss: 1.807782
+Epoch: [11] [ 128/ 160] time: 3553.6622, loss: 1.198094
+Epoch: [11] [ 129/ 160] time: 3554.9557, loss: 1.484775
+Epoch: [11] [ 130/ 160] time: 3556.2520, loss: 0.815709
+Epoch: [11] [ 131/ 160] time: 3564.3702, loss: 0.959080
+Epoch: [11] [ 132/ 160] time: 3565.6555, loss: 1.610275
+Epoch: [11] [ 133/ 160] time: 3566.9460, loss: 0.781289
+Epoch: [11] [ 134/ 160] time: 3568.2337, loss: 1.084764
+Epoch: [11] [ 135/ 160] time: 3569.5268, loss: 1.307528
+Epoch: [11] [ 136/ 160] time: 3577.8901, loss: 0.838592
+Epoch: [11] [ 137/ 160] time: 3579.1844, loss: 1.778953
+Epoch: [11] [ 138/ 160] time: 3580.4752, loss: 0.859892
+Epoch: [11] [ 139/ 160] time: 3581.7785, loss: 0.975463
+Epoch: [11] [ 140/ 160] time: 3583.0684, loss: 1.325477
+Epoch: [11] [ 141/ 160] time: 3591.6645, loss: 0.772309
+Epoch: [11] [ 142/ 160] time: 3592.9458, loss: 1.409962
+Epoch: [11] [ 143/ 160] time: 3594.2392, loss: 0.899941
+Epoch: [11] [ 144/ 160] time: 3595.5295, loss: 0.615871
+Epoch: [11] [ 145/ 160] time: 3596.8185, loss: 1.077434
+Epoch: [11] [ 146/ 160] time: 3605.3500, loss: 1.237157
+Epoch: [11] [ 147/ 160] time: 3606.6405, loss: 1.116916
+Epoch: [11] [ 148/ 160] time: 3607.9361, loss: 1.182313
+Epoch: [11] [ 149/ 160] time: 3609.2245, loss: 0.595352
+Epoch: [11] [ 150/ 160] time: 3610.5176, loss: 1.084990
+Epoch: [11] [ 151/ 160] time: 3619.0635, loss: 1.118475
+Epoch: [11] [ 152/ 160] time: 3620.3505, loss: 0.944351
+Epoch: [11] [ 153/ 160] time: 3621.6450, loss: 0.700277
+Epoch: [11] [ 154/ 160] time: 3622.9356, loss: 0.630193
+Epoch: [11] [ 155/ 160] time: 3624.2276, loss: 0.742638
+Epoch: [11] [ 156/ 160] time: 3632.7614, loss: 1.025958
+Epoch: [11] [ 157/ 160] time: 3634.0567, loss: 0.643958
+Epoch: [11] [ 158/ 160] time: 3635.3489, loss: 0.617425
+Epoch: [11] [ 159/ 160] time: 3636.6383, loss: 0.735040
+Epoch: [11] [ 160/ 160] time: 3637.9275, loss: 0.714490
+[*] Evaluating...
+(1, 180, 180, 1)
+img1 PSNR: 12.61
+(1, 180, 180, 1)
+img2 PSNR: 37.06
+(1, 180, 180, 1)
+img3 PSNR: 36.57
+(1, 180, 180, 1)
+img4 PSNR: 26.47
+(1, 180, 180, 1)
+img5 PSNR: 33.40
+(1, 180, 180, 1)
+img6 PSNR: 36.00
+(1, 180, 180, 1)
+img7 PSNR: 36.78
+(1, 180, 180, 1)
+img8 PSNR: 36.16
+(1, 180, 180, 1)
+img9 PSNR: 35.95
+(1, 180, 180, 1)
+img10 PSNR: 34.99
+--- Test ---- Average PSNR 32.60 ---
+[*] Saving model...
+Epoch: [12] [   1/ 160] time: 3657.1081, loss: 0.955152
+Epoch: [12] [   2/ 160] time: 3658.4043, loss: 0.701885
+Epoch: [12] [   3/ 160] time: 3659.6962, loss: 0.799901
+Epoch: [12] [   4/ 160] time: 3660.9910, loss: 0.702546
+Epoch: [12] [   5/ 160] time: 3662.2842, loss: 0.765302
+Epoch: [12] [   6/ 160] time: 3670.8352, loss: 1.187951
+Epoch: [12] [   7/ 160] time: 3672.1313, loss: 0.580366
+Epoch: [12] [   8/ 160] time: 3673.4272, loss: 0.607732

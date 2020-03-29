@@ -1,0 +1,15 @@
+*.pyc
+checkpoint/
+checkpoint_legacy/
+data
+venv
+.vscode
+__pycache__
+sample/
+*.npy
+.idea/
+logs/
+test/
+*.tar.gz
+*.pptx
+img/
