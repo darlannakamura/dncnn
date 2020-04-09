@@ -14,7 +14,7 @@ parser.add_argument('--use_gpu', dest='use_gpu', type=int, default=1, help='gpu 
 parser.add_argument('--phase', dest='phase', default='train', help='train or test')
 parser.add_argument('--checkpoint_dir', dest='ckpt_dir', default='checkpoint', help='models are saved here')
 parser.add_argument('--test_dir', dest='test_dir', default='denoised', help='denoised sample are saved here')
-parser.add_argument('--dir', dest='dir', default='./data', help='train and test directory')
+parser.add_argument('--dir', dest='dir', default='./data', type=str, help='train and test directory')
 args = parser.parse_args()
 
 
@@ -46,6 +46,8 @@ def main(_):
         os.makedirs(os.path.join(args.dir, args.ckpt_dir))
     if not os.path.exists(os.path.join(args.dir, args.test_dir)):
         os.makedirs(os.path.join(args.dir, args.test_dir))
+    
+    print('DIRECTORY:', args.dir)
 
     lr = args.lr * np.ones([args.epoch])
     lr[30:] = lr[0] / 10.0
