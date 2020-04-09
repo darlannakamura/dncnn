@@ -6,7 +6,7 @@ from model import denoiser
 import os
 import numpy as np
 
-DEFAULT_DATA_DIR = os.path.join('content', 'gdrive', 'My Drive', 'Colab Notebooks', 'dncnn')
+DEFAULT_DATA_DIR = os.path.join('/', 'content', 'gdrive', 'My Drive', 'Colab Notebooks', 'dncnn')
 
 print('DEFAULT_DATA_DIR:'DEFAULT_DATA_DIR)
 
