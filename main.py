@@ -8,7 +8,7 @@ import numpy as np
 
 DEFAULT_DATA_DIR = os.path.join('/', 'content', 'gdrive', 'My Drive', 'Colab Notebooks', 'dncnn')
 
-print('DEFAULT_DATA_DIR:'DEFAULT_DATA_DIR)
+print('DEFAULT_DATA_DIR:', DEFAULT_DATA_DIR)
 
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--epoch', dest='epoch', type=int, default=10, help='# of epochs')
