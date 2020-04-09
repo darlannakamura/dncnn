@@ -6,9 +6,9 @@ from model import denoiser
 import os
 import numpy as np
 
-DEFAULT_DATA_DIR = os.path.join('/', 'content', 'gdrive', 'My Drive', 'Colab Notebooks', 'dncnn')
+# DEFAULT_DATA_DIR = os.path.join('/', 'content', 'gdrive', 'My Drive', 'Colab Notebooks', 'dncnn')
 
-print('DEFAULT_DATA_DIR:', DEFAULT_DATA_DIR)
+# print('DEFAULT_DATA_DIR:', DEFAULT_DATA_DIR)
 
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--epoch', dest='epoch', type=int, default=10, help='# of epochs')
@@ -18,7 +18,8 @@ parser.add_argument('--use_gpu', dest='use_gpu', type=int, default=1, help='gpu 
 parser.add_argument('--phase', dest='phase', default='train', help='train or test')
 parser.add_argument('--checkpoint_dir', dest='ckpt_dir', default='checkpoint', help='models are saved here')
 parser.add_argument('--test_dir', dest='test_dir', default='denoised', help='denoised sample are saved here')
-parser.add_argument('--dir', dest='dir', default=DEFAULT_DATA_DIR, type=str, help='train and test directory')
+parser.add_argument('--dir', dest='dir', default='./data', type=str, help='train and test directory')
+parser.add_argument('--evaluate_files', dest='evaluate_files', default=False, type=bool, help='if will run evaluate input files step before start training')
 args = parser.parse_args()
 
 
@@ -28,7 +29,7 @@ def denoiser_train(denoiser, lr):
         print(noisy_eval_files)
         eval_files = glob(f'{args.dir}/train/original/*.png')
         eval_files = sorted(eval_files)
-        denoiser.train(eval_files, noisy_eval_files, batch_size=args.batch_size, ckpt_dir=os.path.join(args.dir, args.ckpt_dir), epoch=args.epoch, lr=lr)
+        denoiser.train(eval_files, noisy_eval_files, batch_size=args.batch_size, ckpt_dir=os.path.join(args.dir, args.ckpt_dir), epoch=args.epoch, lr=lr, evaluate_files=args.evaluate_files)
 
 
 def denoiser_test(denoiser):

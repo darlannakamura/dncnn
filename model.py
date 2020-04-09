@@ -74,7 +74,7 @@ class denoiser(object):
         print("--- Test ---- Average PSNR %.2f ---" % avg_psnr)
 
 
-    def train(self, eval_files, noisy_files, batch_size, ckpt_dir, epoch, lr, eval_every_epoch=1):
+    def train(self, eval_files, noisy_files, batch_size, ckpt_dir, epoch, lr, eval_every_epoch=1, evaluate_files=True):
 
         numBatch = int(len(filepaths) * 2)
         # load pretrained model
@@ -98,7 +98,8 @@ class denoiser(object):
 
         print("[*] Start training, with start epoch %d start iter %d : " % (start_epoch, iter_num))
         start_time = time.time()
-        self.evaluate(iter_num, eval_files, noisy_files, summary_writer=writer)  # eval_data value range is 0-255
+        if evaluate_files:
+            self.evaluate(iter_num, eval_files, noisy_files, summary_writer=writer)  # eval_data value range is 0-255
         for epoch in range(start_epoch, epoch):
             batch_noisy = np.zeros((batch_size,64,64,1),dtype='float32')
             batch_images = np.zeros((batch_size,64,64,1),dtype='float32')
