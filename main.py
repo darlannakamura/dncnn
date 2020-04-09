@@ -24,7 +24,7 @@ def denoiser_train(denoiser, lr):
         print(noisy_eval_files)
         eval_files = glob(f'{args.dir}/train/original/*.png')
         eval_files = sorted(eval_files)
-        denoiser.train(eval_files, noisy_eval_files, batch_size=args.batch_size, ckpt_dir=args.ckpt_dir, epoch=args.epoch, lr=lr)
+        denoiser.train(eval_files, noisy_eval_files, batch_size=args.batch_size, ckpt_dir=os.path.join(args.dir, args.ckpt_dir), epoch=args.epoch, lr=lr)
 
 
 def denoiser_test(denoiser):
