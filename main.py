@@ -6,6 +6,10 @@ from model import denoiser
 import os
 import numpy as np
 
+DEFAULT_DATA_DIR = os.path.join('content', 'gdrive', 'My Drive', 'Colab Notebooks', 'dncnn')
+
+print('DEFAULT_DATA_DIR:'DEFAULT_DATA_DIR)
+
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--epoch', dest='epoch', type=int, default=10, help='# of epochs')
 parser.add_argument('--batch_size', dest='batch_size', type=int, default=128, help='# images in batch')
@@ -14,7 +18,7 @@ parser.add_argument('--use_gpu', dest='use_gpu', type=int, default=1, help='gpu 
 parser.add_argument('--phase', dest='phase', default='train', help='train or test')
 parser.add_argument('--checkpoint_dir', dest='ckpt_dir', default='checkpoint', help='models are saved here')
 parser.add_argument('--test_dir', dest='test_dir', default='denoised', help='denoised sample are saved here')
-parser.add_argument('--dir', dest='dir', default='./data', type=str, help='train and test directory')
+parser.add_argument('--dir', dest='dir', default=DEFAULT_DATA_DIR, type=str, help='train and test directory')
 args = parser.parse_args()
 
 
